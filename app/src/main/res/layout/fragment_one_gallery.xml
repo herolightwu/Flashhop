@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorYellow"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.OneGalleryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_xmiddle"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:background="@color/colorYellow">
+
+            <TextView
+                android:id="@+id/one_gallery_frag_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/one_gallery_frag_iv_back"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:gravity="center"
+                android:textColor="@color/colorDGray"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_xxmiddle"
+                android:text="@string/gallery_title"/>
+
+            <ImageView
+                android:id="@+id/one_gallery_frag_iv_back"
+                android:layout_width="@dimen/height_xsmall"
+                android:layout_height="@dimen/height_xsmall"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:tint="@color/colorDGray"
+                app:srcCompat="@drawable/ic_back"/>
+
+            <ImageView
+                android:id="@+id/one_gallery_frag_iv_down"
+                android:layout_width="@dimen/height_xxsmall"
+                android:layout_height="@dimen/height_xxsmall"
+                android:layout_marginTop="12dp"
+                android:layout_marginLeft="@dimen/spacing_small"
+                android:layout_marginRight="@dimen/spacing_small"
+                android:layout_toRightOf="@+id/one_gallery_frag_tv_title"
+                android:tint="@color/colorDGray"
+                app:srcCompat="@drawable/ic_arrow_down"/>
+
+            <Button
+                android:id="@+id/one_gallery_frag_btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_xxsmall"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:visibility="gone"
+                android:background="@drawable/border_round_dark"
+                android:textColor="@color/colorYellow"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_middle"
+                android:text="@string/btn_save"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/spacing_large">
+                <TextView
+                    android:id="@+id/one_gallery_frag_tv_choose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:textSize="@dimen/txt_xxsmall"
+                    android:textColor="@color/colorDGray"
+                    android:textStyle="bold"
+                    android:text="Choose picture"/>
+
+                <GridView
+                    android:id="@+id/one_gallery_frag_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/one_gallery_frag_tv_choose"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:numColumns="4"
+                    android:horizontalSpacing="@dimen/spacing_min"
+                    android:verticalSpacing="@dimen/spacing_min"
+                    android:background="@color/colorWhite"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

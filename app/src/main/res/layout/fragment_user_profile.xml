@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/border_round_top_half_w"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.UserProfileFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+
+        <LinearLayout
+            android:id="@+id/user_frag_ll_outside"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xxlarge"
+                    android:layout_marginLeft="@dimen/spacing_large"
+                    android:layout_marginRight="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/user_frag_iv_avatar"
+                            android:layout_width="@dimen/height_middle"
+                            android:layout_height="@dimen/height_middle"
+                            android:src="@drawable/image_1"
+                            android:tint="@color/colorBlack"
+                            app:civ_border_color="@color/colorWhite"
+                            app:civ_border_width="0dp"/>
+
+                        <TextView
+                            android:id="@+id/user_frag_tv_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_middle"
+                            android:layout_marginRight="@dimen/height_middle"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:layout_toRightOf="@+id/user_frag_iv_avatar"
+                            android:textColor="@color/colorDGray"
+                            android:textSize="@dimen/txt_middle"
+                            android:fontFamily="@font/sourcesanspro_bold"
+                            android:text="Oreo"/>
+
+                        <TextView
+                            android:id="@+id/user_frag_tv_add_friend"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/user_frag_tv_name"
+                            android:layout_toLeftOf="@+id/user_frag_iv_more"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:textColor="@color/colorGray"
+                            android:textSize="@dimen/txt_middle"
+                            android:fontFamily="@font/sourcesanspro"
+                            android:text="@string/profile_add_friend"/>
+
+                        <ImageView
+                            android:id="@+id/user_frag_iv_more"
+                            android:layout_width="@dimen/height_middle"
+                            android:layout_height="@dimen/height_middle"
+                            android:layout_alignParentRight="true"
+                            android:tint="@color/colorGray"
+                            app:srcCompat="@drawable/ic_more_vert"/>
+
+                        <LinearLayout
+                            android:id="@+id/user_frag_ll_photo"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:layout_below="@+id/user_frag_iv_avatar"
+                            android:layout_marginTop="@dimen/spacing_large"
+                            android:layout_marginBottom="@dimen/spacing_large"
+                            android:clickable="true"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/user_frag_ll_photo0"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/user_frag_ll_photo4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+                                    <ImageView
+                                        android:id="@+id/user_frag_iv_photo0"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_margin="@dimen/spacing_small"
+                                        android:src="@drawable/image_8"
+                                        android:scaleType="centerCrop"
+                                        android:adjustViewBounds="true"/>
+
+                                    <ImageView
+                                        android:id="@+id/user_frag_iv_photo8"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_margin="@dimen/spacing_small"
+                                        android:src="@drawable/image_8"
+                                        android:scaleType="centerCrop"
+                                        android:adjustViewBounds="true"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/user_frag_ll_photo5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1">
+                                    <ImageView
+                                        android:id="@+id/user_frag_iv_photo6"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_margin="@dimen/spacing_small"
+                                        android:src="@drawable/image_8"
+                                        android:scaleType="centerCrop"
+                                        android:adjustViewBounds="true"/>
+
+                                    <ImageView
+                                        android:id="@+id/user_frag_iv_photo7"
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1"
+                                        android:layout_margin="@dimen/spacing_small"
+                                        android:src="@drawable/image_8"
+                                        android:scaleType="centerCrop"
+                                        android:adjustViewBounds="true"/>
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/user_frag_ll_photo1"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:visibility="gone"
+                                android:layout_weight="3">
+
+                                <ImageView
+                                    android:id="@+id/user_frag_iv_photo1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/spacing_small"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/image_8"
+                                    android:adjustViewBounds="true"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/user_frag_ll_photo2"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:visibility="gone"
+                                android:layout_weight="3">
+
+                                <ImageView
+                                    android:id="@+id/user_frag_iv_photo2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="@dimen/spacing_small"
+                                    android:src="@drawable/image_8"
+                                    android:scaleType="centerCrop"
+                                    android:adjustViewBounds="true"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/user_frag_ll_photo3"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/user_frag_iv_photo3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_margin="@dimen/spacing_small"
+                                    android:src="@drawable/image_8"
+                                    android:scaleType="centerCrop"
+                                    android:adjustViewBounds="true"/>
+
+                                <ImageView
+                                    android:id="@+id/user_frag_iv_photo4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_margin="@dimen/spacing_small"
+                                    android:src="@drawable/image_8"
+                                    android:scaleType="centerCrop"
+                                    android:adjustViewBounds="true"/>
+
+                                <ImageView
+                                    android:id="@+id/user_frag_iv_photo5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_margin="@dimen/spacing_small"
+                                    android:src="@drawable/image_8"
+                                    android:scaleType="centerCrop"
+                                    android:adjustViewBounds="true"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/user_frag_ll_add_guide"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_large"
+                            android:layout_below="@+id/user_frag_iv_more"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/user_frag_tv_friend_guide"
+                                android:layout_width="280dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_round_guide"
+                                android:padding="@dimen/spacing_middle"
+                                android:textColor="@color/colorWhite"
+                                android:gravity="center"
+                                android:textSize="@dimen/txt_middle"
+                                android:fontFamily="@font/sourcesanspro"
+                                android:text="@string/profile_add_guide"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/user_frag_ll_menu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/user_frag_iv_more"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/spacing_large"
+                            android:background="@drawable/border_round_black_trans"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/user_frag_tv_unfriend"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/spacing_large"
+                                android:paddingRight="@dimen/spacing_large"
+                                android:paddingTop="@dimen/spacing_middle"
+                                android:paddingBottom="@dimen/spacing_middle"
+                                android:fontFamily="@font/sourcesanspro"
+                                android:textSize="@dimen/txt_middle"
+                                android:textColor="@color/colorWhite"
+                                android:text="@string/profile_menu_unfriend"/>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorWhite"/>
+                            <TextView
+                                android:id="@+id/user_frag_tv_report"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/spacing_large"
+                                android:paddingRight="@dimen/spacing_large"
+                                android:paddingTop="@dimen/spacing_middle"
+                                android:paddingBottom="@dimen/spacing_middle"
+                                android:fontFamily="@font/sourcesanspro"
+                                android:textSize="@dimen/txt_middle"
+                                android:textColor="@color/colorWhite"
+                                android:text="@string/profile_menu_report"/>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorDGray"
+                            android:fontFamily="@font/sourcesanspro_semibold"
+                            android:text="@string/filter_age"/>
+
+                        <TextView
+                            android:id="@+id/user_frag_tv_age"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorDGray"
+                            android:fontFamily="@font/sourcesanspro"
+                            android:text="29"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/user_frag_ll_organized"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_middle">
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorDGray"
+                            android:fontFamily="@font/sourcesanspro_semibold"
+                            android:text="@string/profile_organized"/>
+
+                        <TextView
+                            android:id="@+id/user_frag_tv_organized"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorDGray"
+                            android:fontFamily="@font/sourcesanspro"
+                            android:text="35 events"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_middle">
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorDGray"
+                            android:fontFamily="@font/sourcesanspro_semibold"
+                            android:text="@string/chat_hangouts"/>
+
+                        <TextView
+                            android:id="@+id/user_frag_tv_hangouts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorDGray"
+                            android:fontFamily="@font/sourcesanspro"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_middle">
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorDGray"
+                            android:fontFamily="@font/sourcesanspro_semibold"
+                            android:text="@string/profile_tags"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_small">
+
+                                <TextView
+                                    android:id="@+id/user_frag_tv_tag_him"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:textSize="@dimen/txt_xxsmall"
+                                    android:textColor="@color/colorGray"
+                                    android:fontFamily="@font/sourcesanspro"
+                                    android:text="+ Tag the hopper"/>
+
+                                <TextView
+                                    android:id="@+id/user_frag_tv_tag0"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/border_y_back_w"
+                                    android:layout_marginLeft="@dimen/spacing_middle"
+                                    android:paddingLeft="@dimen/spacing_middle"
+                                    android:paddingRight="@dimen/spacing_middle"
+                                    android:paddingTop="@dimen/spacing_min"
+                                    android:paddingBottom="@dimen/spacing_min"
+                                    android:textSize="@dimen/txt_xsmall"
+                                    android:textColor="@color/colorDGray"
+                                    android:fontFamily="@font/sourcesanspro"
+                                    android:text="#Atmosphere Mover"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_small">
+                                <TextView
+                                    android:id="@+id/user_frag_tv_tag1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:background="@drawable/border_y_back_w"
+                                    android:paddingLeft="@dimen/spacing_middle"
+                                    android:paddingRight="@dimen/spacing_middle"
+                                    android:paddingTop="@dimen/spacing_min"
+                                    android:paddingBottom="@dimen/spacing_min"
+                                    android:textSize="@dimen/txt_xsmall"
+                                    android:textColor="@color/colorDGray"
+                                    android:fontFamily="@font/sourcesanspro"
+                                    android:text="#Drama King"/>
+
+                                <TextView
+                                    android:id="@+id/user_frag_tv_tag2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/spacing_middle"
+                                    android:background="@drawable/border_y_back_w"
+                                    android:paddingLeft="@dimen/spacing_middle"
+                                    android:paddingRight="@dimen/spacing_middle"
+                                    android:paddingTop="@dimen/spacing_min"
+                                    android:paddingBottom="@dimen/spacing_min"
+                                    android:textSize="@dimen/txt_xsmall"
+                                    android:textColor="@color/colorDGray"
+                                    android:fontFamily="@font/sourcesanspro"
+                                    android:text="#Active"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_middle"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:textSize="@dimen/txt_xxsmall"
+                                    android:textColor="@color/colorDGray"
+                                    android:fontFamily="@font/sourcesanspro_semibold"
+                                    android:text="@string/personality_type"/>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/user_frag_tv_type"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:textSize="@dimen/txt_xxsmall"
+                                        android:textColor="@color/colorDGray"
+                                        android:fontFamily="@font/sourcesanspro"
+                                        android:text="Campaigner - ENFP"/>
+
+                                    <TextView
+                                        android:id="@+id/user_frag_tv_what"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginRight="@dimen/spacing_large"
+                                        android:textSize="@dimen/txt_xsmall"
+                                        android:textColor="@color/colorDGray"
+                                        android:fontFamily="@font/sourcesanspro"
+                                        android:text="@string/what_is_this"/>
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/spacing_middle">
+                                        <TextView
+                                            android:id="@+id/user_frag_tv_fun"
+                                            android:layout_width="120dp"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="@dimen/txt_xxsmall"
+                                            android:textColor="@color/colorDGray"
+                                            android:fontFamily="@font/sourcesanspro_semibold"
+                                            android:text="@string/fun_facts"/>
+
+                                        <TextView
+                                            android:id="@+id/user_frag_tv_facts"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:textSize="@dimen/txt_xxsmall"
+                                            android:textColor="@color/colorDGray"
+                                            android:fontFamily="@font/sourcesanspro"
+                                            android:text="@string/fun_facts_hint"/>
+                                    </LinearLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/spacing_xlarge"
+                                        android:layout_marginBottom="@dimen/spacing_large">
+
+                                        <ImageView
+                                            android:id="@+id/user_frag_iv_bag"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="@dimen/height_middle"
+                                            android:src="@drawable/ic_bag_y"/>
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:id="@+id/user_frag_tv_like_question"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="@dimen/spacing_middle"
+                                                android:layout_marginBottom="@dimen/spacing_xlarge"
+                                                android:layout_marginLeft="120dp"
+                                                android:textColor="@color/colorGray"
+                                                android:fontFamily="@font/sourcesanspro"
+                                                android:textSize="@dimen/txt_xxsmall"
+                                                android:text="@string/profile_like_question"/>
+                                            <Button
+                                                android:id="@+id/user_frag_btn_invite"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="@dimen/height_middle"
+                                                android:layout_marginBottom="@dimen/spacing_middle"
+                                                android:layout_gravity="center_horizontal"
+                                                android:background="@drawable/border_round_yellow"
+                                                android:paddingLeft="@dimen/spacing_large"
+                                                android:paddingRight="@dimen/spacing_large"
+                                                android:textColor="@color/colorDGray"
+                                                android:textAllCaps="false"
+                                                android:fontFamily="@font/sourcesanspro_bold"
+                                                android:textSize="@dimen/txt_xmiddle"
+                                                android:text="@string/btn_invite"/>
+                                        </LinearLayout>
+
+                                        <!--<LinearLayout
+                                            android:id="@+id/user_frag_ll_tag_tip"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:visibility="gone"
+                                            android:layout_marginTop="@dimen/spacing_xxlarge">
+                                            <Button
+                                                android:id="@+id/user_frag_btn_tag"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="@dimen/height_middle"
+                                                android:layout_margin="@dimen/spacing_large"
+                                                android:layout_gravity="center_horizontal"
+                                                android:background="@drawable/border_round_yellow"
+                                                android:paddingLeft="@dimen/spacing_large"
+                                                android:paddingRight="@dimen/spacing_large"
+                                                android:textColor="@color/colorDGray"
+                                                android:textAllCaps="false"
+                                                android:fontFamily="@font/sourcesanspro_bold"
+                                                android:textSize="@dimen/txt_xmiddle"
+                                                android:text="@string/btn_tag_user"/>
+
+                                            <Button
+                                                android:id="@+id/user_frag_btn_tip"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="@dimen/height_middle"
+                                                android:layout_margin="@dimen/spacing_large"
+                                                android:layout_gravity="center_horizontal"
+                                                android:background="@drawable/border_round_yellow"
+                                                android:paddingLeft="@dimen/spacing_large"
+                                                android:paddingRight="@dimen/spacing_large"
+                                                android:textColor="@color/colorDGray"
+                                                android:textAllCaps="false"
+                                                android:fontFamily="@font/sourcesanspro_bold"
+                                                android:textSize="@dimen/txt_xmiddle"
+                                                android:text="@string/btn_tip_user"/>
+                                        </LinearLayout>-->
+
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/user_frag_tv_guide_what"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/border_round_guide"
+                                    android:layout_alignParentEnd="true"
+                                    android:gravity="center"
+                                    android:padding="@dimen/spacing_middle"
+                                    android:textSize="@dimen/txt_xxsmall"
+                                    android:textColor="@color/colorWhite"
+                                    android:text="@string/what_description"
+                                    android:visibility="gone"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/user_frag_tv_guide_tags"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_round_guide"
+                            android:layout_centerHorizontal="true"
+                            android:gravity="center"
+                            android:padding="@dimen/spacing_middle"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorWhite"
+                            android:text="You need to hangout first"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

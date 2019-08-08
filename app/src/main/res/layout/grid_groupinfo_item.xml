@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/groupinfo_item_view"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_margin="@dimen/spacing_large">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/groupinfo_item_civ_avatar"
+        android:layout_width="@dimen/height_xxsmall"
+        android:layout_height="@dimen/height_xxsmall"
+        android:layout_centerVertical="true"
+        android:src="@drawable/image_1"
+        android:tint="@color/colorWhite"
+        app:civ_border_color="@color/colorGreen"
+        app:civ_border_width="0dp"/>
+
+    <TextView
+        android:id="@+id/groupinfo_item_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/groupinfo_item_civ_avatar"
+        android:layout_marginLeft="@dimen/spacing_middle"
+        android:layout_marginRight="@dimen/spacing_middle"
+        android:layout_centerVertical="true"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:textColor="@color/colorDGray"
+        android:textSize="@dimen/txt_xxsmall"
+        android:text="Oreo"/>
+
+    <ImageView
+        android:id="@+id/groupinfo_item_iv_card"
+        android:layout_width="@dimen/height_xsmall"
+        android:layout_height="@dimen/height_xsmall"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/spacing_middle"
+        android:visibility="gone"
+        android:src="@drawable/ic_checked_card"
+        android:layout_alignParentEnd="true"/>
+
+    <ImageView
+        android:id="@+id/groupinfo_item_iv_check"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/spacing_middle"
+        android:src="@drawable/ic_unchecked"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

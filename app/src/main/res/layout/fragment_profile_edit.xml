@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.EditProfileFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+        <LinearLayout
+            android:id="@+id/edit_pro_frag_outside"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:clickable="true"
+            android:focusable="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_xmiddle"
+                android:layout_marginTop="@dimen/spacing_xlarge">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:textColor="@color/colorDGray"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textSize="@dimen/txt_xxmiddle"
+                    android:text="@string/profile_edit_title"/>
+
+                <ImageView
+                    android:id="@+id/edit_pro_frag_iv_back"
+                    android:layout_width="@dimen/height_xsmall"
+                    android:layout_height="@dimen/height_xsmall"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/spacing_middle"
+                    android:layout_marginRight="@dimen/spacing_middle"
+                    android:tint="@color/colorDGray"
+                    app:srcCompat="@drawable/ic_back"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/edit_pro_frag_ll_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_large"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/edit_pro_frag_iv_avatar"
+                        android:layout_width="@dimen/height_middle"
+                        android:layout_height="@dimen/height_middle"
+                        android:src="@drawable/image_1"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="0dp"/>
+
+                    <TextView
+                        android:id="@+id/edit_pro_frag_tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_middle"
+                        android:layout_toRightOf="@+id/edit_pro_frag_iv_avatar"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorDGray"
+                        android:textSize="@dimen/txt_middle"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:text="@string/btn_save"/>
+
+                    <ImageView
+                        android:id="@+id/edit_pro_frag_iv_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_setting"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/edit_pro_frag_ll_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:background="@color/colorGray_F"
+                    android:clickable="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/edit_pro_frag_ll_photo0"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/edit_pro_frag_ll_photo4"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/edit_pro_frag_iv_photo0"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/spacing_small"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"/>
+
+                            <ImageView
+                                android:id="@+id/edit_pro_frag_iv_photo8"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/spacing_small"
+                                android:src="@drawable/image_8"
+                                android:visibility="gone"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/edit_pro_frag_ll_photo5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:visibility="gone"
+                            android:layout_weight="1">
+                            <ImageView
+                                android:id="@+id/edit_pro_frag_iv_photo6"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/spacing_small"
+                                android:src="@drawable/image_8"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"/>
+
+                            <ImageView
+                                android:id="@+id/edit_pro_frag_iv_photo7"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:layout_margin="@dimen/spacing_small"
+                                android:visibility="gone"
+                                android:src="@drawable/image_8"
+                                android:scaleType="centerCrop"
+                                android:adjustViewBounds="true"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/edit_pro_frag_ll_photo1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:layout_weight="3">
+
+                        <ImageView
+                            android:id="@+id/edit_pro_frag_iv_photo1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/spacing_small"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/image_8"
+                            android:adjustViewBounds="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/edit_pro_frag_ll_photo2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:layout_weight="3">
+
+                        <ImageView
+                            android:id="@+id/edit_pro_frag_iv_photo2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/spacing_small"
+                            android:src="@drawable/image_8"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/edit_pro_frag_ll_photo3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/edit_pro_frag_iv_photo3"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="@dimen/spacing_small"
+                            android:src="@drawable/image_8"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"/>
+
+                        <ImageView
+                            android:id="@+id/edit_pro_frag_iv_photo4"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="@dimen/spacing_small"
+                            android:src="@drawable/image_8"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"/>
+
+                        <ImageView
+                            android:id="@+id/edit_pro_frag_iv_photo5"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_margin="@dimen/spacing_small"
+                            android:src="@drawable/image_8"
+                            android:scaleType="centerCrop"
+                            android:adjustViewBounds="true"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:text="@string/personality_type"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/spacing_large"
+                        android:background="@drawable/border_round_black_bg_w">
+                        <Spinner
+                            android:id="@+id/edit_pro_frag_sp_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_xxsmall"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/edit_pro_frag_ll_what"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_middle"
+                        android:layout_marginBottom="@dimen/spacing_middle">
+                        <TextView
+                            android:id="@+id/edit_pro_frag_tv_what"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorGray"
+                            android:layout_marginLeft="136dp"
+                            android:textSize="@dimen/txt_xsmall"
+                            android:text="@string/what_is_this"/>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_xlarge"
+                        android:layout_below="@+id/edit_pro_frag_ll_what"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:id="@+id/edit_pro_frag_tv_fun"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:text="@string/fun_facts"/>
+
+                        <EditText
+                            android:id="@+id/edit_pro_frag_et_facts"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_round_black_bg_w"
+                            android:minHeight="@dimen/height_large"
+                            android:layout_toRightOf="@+id/edit_pro_frag_tv_fun"
+                            android:layout_marginLeft="@dimen/spacing_large"
+                            android:maxLength="140"
+                            android:padding="@dimen/spacing_middle"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:gravity="start"
+                            android:textStyle="italic"
+                            android:hint="@string/fun_facts_hint"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/edit_pro_frag_ll_what_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edit_pro_frag_ll_what"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="gone"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_round_guide"
+                            android:gravity="center"
+                            android:padding="@dimen/spacing_middle"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorWhite"
+                            android:text="@string/what_description"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xlarge"
+                    android:layout_marginBottom="@dimen/spacing_xlarge">
+
+                    <ImageView
+                        android:id="@+id/edit_pro_frag_iv_bag"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_middle"
+                        android:src="@drawable/ic_bag_y"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:weightSum="3"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/edit_pro_frag_btn_preview"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="@dimen/height_middle"
+                            android:layout_marginBottom="@dimen/spacing_middle"
+                            android:background="@drawable/border_round_yellow"
+                            android:textColor="@color/colorDGray"
+                            android:textAllCaps="false"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/txt_xmiddle"
+                            android:text="@string/btn_preview"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/edit_pro_frag_ll_bag_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/edit_pro_frag_iv_bag"
+                        android:orientation="vertical">
+
+                        <View
+                            android:id="@+id/edit_pro_frag_v_line_1"
+                            android:layout_width="1dp"
+                            android:layout_height="@dimen/height_small"
+                            android:layout_marginLeft="@dimen/spacing_large"
+                            android:background="@color/colorBlack"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/border_round_black_trans"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorWhite"
+                            android:text="@string/bag_description"
+                            android:padding="@dimen/spacing_middle"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</FrameLayout>

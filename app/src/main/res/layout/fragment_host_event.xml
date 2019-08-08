@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HostEventFragment">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_xmiddle"
+            android:layout_marginTop="@dimen/spacing_large">
+
+            <TextView
+                android:id="@+id/hevent_frag_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/colorDGray"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textSize="@dimen/txt_xxmiddle"
+                android:text="@string/btn_host_event"/>
+
+            <ImageView
+                android:id="@+id/hevent_frag_iv_back"
+                android:layout_width="@dimen/height_xsmall"
+                android:layout_height="@dimen/height_xsmall"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:tint="@color/colorBlack"
+                app:srcCompat="@drawable/ic_back"/>
+
+        </RelativeLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:scrollingCache="true">
+            <LinearLayout
+                android:id="@+id/hevent_frag_ll_outside"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_large"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/hevent_frag_et_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/spacing_middle"
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textColor="@color/colorDGray"
+                        android:inputType="textEmailAddress"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:hint="@string/event_title"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_middle"
+                        android:layout_margin="@dimen/spacing_middle"
+                        android:weightSum="2">
+                        <!--<android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/hevent_frag_sp_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+
+                            <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/hevent_frag_sp_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>-->
+                        <RelativeLayout
+                            android:id="@+id/hevent_frag_rl_date"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_marginRight="@dimen/spacing_middle"
+                            android:clickable="true">
+                            <TextView
+                                android:id="@+id/hevent_frag_et_date"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/sourcesanspro"
+                                android:textSize="@dimen/txt_xxsmall"
+                                android:textColor="@color/colorDGray"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/spacing_middle"
+                                android:paddingRight="@dimen/spacing_large"
+                                android:hint="Date"/>
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:tint="@color/colorGray"
+                                app:srcCompat="@drawable/ic_drop_down"/>
+                            <View android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorGray"
+                                android:layout_alignParentBottom="true"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/hevent_frag_rl_time"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/spacing_middle"
+                            android:layout_weight="1">
+                            <TextView
+                                android:id="@+id/hevent_frag_et_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/sourcesanspro"
+                                android:textSize="@dimen/txt_xxsmall"
+                                android:textColor="@color/colorDGray"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="@dimen/spacing_middle"
+                                android:paddingRight="@dimen/spacing_large"
+                                android:hint="Time"/>
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:tint="@color/colorGray"
+                                app:srcCompat="@drawable/ic_drop_down"/>
+                            <View android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorGray"
+                                android:layout_alignParentBottom="true"/>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/hevent_frag_et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_middle"
+                        android:layout_marginLeft="@dimen/spacing_middle"
+                        android:layout_marginRight="@dimen/spacing_middle"
+                        android:clickable="true"
+                        android:focusableInTouchMode="true"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textColor="@color/colorDGray"
+                        android:inputType="textEmailAddress"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:hint="@string/event_address"/>
+
+                    <!--<AutoCompleteTextView
+                        android:id="@+id/hevent_frag_et_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_middle"
+                        android:layout_marginLeft="@dimen/spacing_middle"
+                        android:layout_marginRight="@dimen/spacing_middle"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textColor="@color/colorDGray"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:hint="@string/event_address"/>-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_large"
+                                android:layout_marginLeft="@dimen/spacing_middle"
+                                android:layout_marginRight="@dimen/spacing_middle"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:id="@+id/hevent_frag_tv_people"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/sourcesanspro"
+                                        android:textSize="@dimen/txt_xxsmall"
+                                        android:textColor="@color/colorDGray"
+                                        android:text="@string/event_of_people"/>
+
+                                    <TextView
+                                        android:id="@+id/hevent_frag_tv_max_people"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:fontFamily="@font/sourcesanspro"
+                                        android:textSize="@dimen/txt_xxsmall"
+                                        android:textColor="@color/colorGray"
+                                        android:text="@string/event_max_30"/>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/spacing_middle">
+
+                                    <com.jaygoo.widget.RangeSeekBar
+                                        android:id="@+id/hevent_frag_sb_people"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        app:rsb_gravity="center"
+                                        app:rsb_mode="range"
+                                        app:rsb_thumb_height="14dp"
+                                        app:rsb_thumb_width="14dp"
+                                        app:rsb_min="2"
+                                        app:rsb_max="50"
+                                        app:rsb_progress_default_color="@color/colorDGray"
+                                        app:rsb_progress_radius="2dp"
+                                        app:rsb_progress_color="@color/colorYellow"
+                                        app:rsb_thumb_inactivated_drawable="@drawable/thumb_activated"
+                                        app:rsb_thumb_drawable="@drawable/thumb_activated"/>
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/spacing_middle"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/spacing_large">
+                                    <TextView
+                                        android:id="@+id/hevent_frag_tv_age"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/sourcesanspro"
+                                        android:textSize="@dimen/txt_xxsmall"
+                                        android:textColor="@color/colorDGray"
+                                        android:text="@string/filter_age"/>
+
+                                    <TextView
+                                        android:id="@+id/hevent_frag_tv_max_age"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:fontFamily="@font/sourcesanspro"
+                                        android:textSize="@dimen/txt_xxsmall"
+                                        android:textColor="@color/colorGray"
+                                        android:text="18 - 99"/>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/spacing_middle">
+
+                                    <com.jaygoo.widget.RangeSeekBar
+                                        android:id="@+id/hevent_frag_sb_age"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        app:rsb_gravity="center"
+                                        app:rsb_mode="range"
+                                        app:rsb_thumb_height="14dp"
+                                        app:rsb_thumb_width="14dp"
+                                        app:rsb_min="18"
+                                        app:rsb_max="99"
+                                        app:rsb_progress_default_color="@color/colorDGray"
+                                        app:rsb_progress_radius="2dp"
+                                        app:rsb_progress_color="@color/colorYellow"
+                                        app:rsb_thumb_inactivated_drawable="@drawable/thumb_activated"
+                                        app:rsb_thumb_drawable="@drawable/thumb_activated"/>
+
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_middle"
+                                android:layout_margin="@dimen/spacing_middle">
+                                <android.support.v7.widget.AppCompatSpinner
+                                    android:id="@+id/hevent_frag_sp_category"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+                                <EditText
+                                    android:id="@+id/hevent_frag_et_category"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/sourcesanspro"
+                                    android:editable="false"
+                                    android:focusable="false"
+                                    android:textColor="@color/colorRed"
+                                    android:textSize="@dimen/txt_xxsmall"
+                                    android:text="*Category"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/spacing_middle">
+                                <ImageView
+                                    android:id="@+id/hevent_frag_iv_photo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="200dp"
+                                    android:background="@color/colorGray_A"
+                                    android:scaleType="centerCrop"/>
+
+                                <Button
+                                    android:id="@+id/hevent_frag_btn_change"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/height_middle"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignBottom="@+id/hevent_frag_iv_photo"
+                                    android:layout_margin="@dimen/spacing_middle"
+                                    android:background="@drawable/border_round_yellow"
+                                    android:paddingLeft="@dimen/spacing_middle"
+                                    android:paddingRight="@dimen/spacing_middle"
+                                    android:textColor="@color/colorDGray"
+                                    android:textAllCaps="false"
+                                    android:fontFamily="@font/sourcesanspro_bold"
+                                    android:textSize="@dimen/txt_xxsmall"
+                                    android:text="@string/btn_change_cover"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/spacing_middle">
+
+                                <TextView
+                                    android:id="@+id/hevent_frag_tv_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="@dimen/txt_xxsmall"
+                                    android:textColor="@color/colorDGray"
+                                    android:fontFamily="@font/sourcesanspro"
+                                    android:text="@string/event_price"/>
+
+                                <EditText
+                                    android:id="@+id/hevent_frag_et_price"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/hevent_frag_tv_price"
+                                    android:layout_toLeftOf="@+id/hevent_frag_sp_currency"
+                                    android:layout_marginLeft="@dimen/spacing_large"
+                                    android:layout_marginRight="@dimen/spacing_large"
+                                    android:clickable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:fontFamily="@font/sourcesanspro"
+                                    android:textColor="@color/colorDGray"
+                                    android:inputType="numberDecimal"
+                                    android:textSize="@dimen/txt_xxsmall"
+                                    android:hint="0"/>
+
+                                <Spinner
+                                    android:id="@+id/hevent_frag_sp_currency"
+                                    android:layout_width="80dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_toLeftOf="@+id/hevent_frag_cb_later"
+                                    android:layout_marginRight="@dimen/spacing_large"
+                                    android:layout_centerVertical="true"/>
+
+                                <CheckBox
+                                    android:id="@+id/hevent_frag_cb_later"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/height_small"
+                                    android:layout_margin="@dimen/spacing_middle"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:visibility="invisible"
+                                    android:fontFamily="@font/sourcesanspro"
+                                    android:button="@drawable/custom_checkbox"
+                                    android:text="Pay later"
+                                    android:textSize="@dimen/txt_xxsmall"
+                                    android:textColor="@color/colorDGray"/>
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/spacing_middle"
+                                android:fontFamily="@font/sourcesanspro"
+                                android:textColor="@color/colorDGray"
+                                android:textSize="@dimen/txt_xxsmall"
+                                android:text="@string/event_description"/>
+
+                            <EditText
+                                android:id="@+id/hevent_frag_et_desc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/border_round_black_bg_w"
+                                android:minHeight="@dimen/height_large"
+                                android:layout_margin="@dimen/spacing_middle"
+                                android:maxLength="280"
+                                android:clickable="true"
+                                android:focusableInTouchMode="true"
+                                android:fontFamily="@font/sourcesanspro"
+                                android:padding="@dimen/spacing_middle"
+                                android:textSize="@dimen/txt_xxsmall"
+                                android:textColor="@color/colorDGray"
+                                android:gravity="start"
+                                android:hint="@string/event_280_maximum"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/spacing_middle"
+                                android:weightSum="3">
+                                <CheckBox
+                                    android:id="@+id/hevent_frag_cb_coed"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/height_small"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sourcesanspro"
+                                    android:button="@drawable/custom_checkbox"
+                                    android:checked="true"
+                                    android:text="@string/event_coed"
+                                    android:textSize="@dimen/txt_xxsmall"
+                                    android:textColor="@color/colorDGray"/>
+
+                                <CheckBox
+                                    android:id="@+id/hevent_frag_cb_boys"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/height_small"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sourcesanspro"
+                                    android:button="@drawable/custom_checkbox"
+                                    android:text="@string/event_boys"
+                                    android:textSize="@dimen/txt_xxsmall"
+                                    android:textColor="@color/colorDGray"/>
+
+                                <CheckBox
+                                    android:id="@+id/hevent_frag_cb_girls"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/height_small"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/sourcesanspro"
+                                    android:button="@drawable/custom_checkbox"
+                                    android:text="@string/event_girls"
+                                    android:textSize="@dimen/txt_xxsmall"
+                                    android:textColor="@color/colorDGray"/>
+                            </LinearLayout>
+
+                            <CheckBox
+                                android:id="@+id/hevent_frag_cb_private"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_small"
+                                android:layout_margin="@dimen/spacing_middle"
+                                android:fontFamily="@font/sourcesanspro"
+                                android:button="@drawable/custom_checkbox"
+                                android:text="@string/event_private"
+                                android:textSize="@dimen/txt_xxsmall"
+                                android:textColor="@color/colorDGray"/>
+
+                            <CheckBox
+                                android:id="@+id/hevent_frag_cb_exception"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/height_small"
+                                android:layout_margin="@dimen/spacing_middle"
+                                android:fontFamily="@font/sourcesanspro"
+                                android:button="@drawable/custom_checkbox"
+                                android:text="@string/event_exception"
+                                android:textSize="@dimen/txt_xxsmall"
+                                android:textColor="@color/colorDGray"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/spacing_middle"
+                                android:layout_gravity="center_horizontal">
+                                <Button
+                                    android:id="@+id/hevent_frag_btn_draft"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/height_middle"
+                                    android:layout_margin="@dimen/spacing_middle"
+                                    android:background="@drawable/border_round_yellow"
+                                    android:paddingLeft="@dimen/spacing_middle"
+                                    android:paddingRight="@dimen/spacing_middle"
+                                    android:textColor="@color/colorDGray"
+                                    android:textAllCaps="false"
+                                    android:fontFamily="@font/sourcesanspro_bold"
+                                    android:textSize="@dimen/txt_middle"
+                                    android:text="@string/btn_save_draft"/>
+
+                                <Button
+                                    android:id="@+id/hevent_frag_btn_publish"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/height_middle"
+                                    android:layout_margin="@dimen/spacing_middle"
+                                    android:background="@drawable/border_round_yellow"
+                                    android:paddingLeft="@dimen/spacing_middle"
+                                    android:paddingRight="@dimen/spacing_middle"
+                                    android:textColor="@color/colorDGray"
+                                    android:textAllCaps="false"
+                                    android:fontFamily="@font/sourcesanspro_bold"
+                                    android:textSize="@dimen/txt_middle"
+                                    android:text="@string/btn_publish"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/hevent_frag_suggestion_recycler"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_middle"
+                            android:layout_marginRight="@dimen/spacing_middle"
+                            android:visibility="gone"
+                            android:background="@android:color/transparent"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+</FrameLayout>

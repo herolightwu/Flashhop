@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorYellow"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_xmiddle"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:background="@color/colorYellow">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/avatar_frag_iv_back"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:gravity="center"
+                android:textColor="@color/colorDGray"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_xxmiddle"
+                android:text="@string/gallery_title"/>
+
+            <ImageView
+                android:id="@+id/avatar_frag_iv_back"
+                android:layout_width="@dimen/height_xsmall"
+                android:layout_height="@dimen/height_xsmall"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:tint="@color/colorDGray"
+                app:srcCompat="@drawable/ic_back"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/spacing_large">
+                <TextView
+                    android:id="@+id/avatar_frag_tv_choose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:textSize="@dimen/txt_xxsmall"
+                    android:textColor="@color/colorDGray"
+                    android:textStyle="bold"
+                    android:text="Change profile image"/>
+
+                <GridView
+                    android:id="@+id/avatar_frag_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/avatar_frag_tv_choose"
+                    android:layout_above="@+id/avatar_frag_btn_save"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:numColumns="4"
+                    android:horizontalSpacing="@dimen/spacing_min"
+                    android:verticalSpacing="@dimen/spacing_min"
+                    android:background="@color/colorWhite"/>
+
+                <Button
+                    android:id="@+id/avatar_frag_btn_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height_middle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/spacing_xlarge"
+                    android:background="@drawable/border_round_yellow"
+                    android:textColor="@color/colorDGray"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/txt_xxsmall"
+                    android:text="@string/btn_save"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

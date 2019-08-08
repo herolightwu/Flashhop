@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_round_white">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_large"/>
+
+    <TextView
+        android:id="@+id/custom_pay_tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_middle"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:textSize="@dimen/txt_xxsmall"
+        android:textColor="@color/colorDGray"
+        android:text="This event request pay to join"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_middle"
+        android:layout_gravity="center_horizontal"
+        >
+        <TextView
+            android:id="@+id/custom_pay_tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_middle"
+            android:layout_marginRight="@dimen/spacing_middle"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xxlarge"
+            android:textColor="@color/colorDGray"
+            android:text="$10.00"/>
+        <TextView
+            android:id="@+id/custom_pay_tv_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_middle"
+            android:layout_marginRight="@dimen/spacing_middle"
+            android:layout_marginBottom="@dimen/spacing_min"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xxsmall"
+            android:textColor="@color/colorDGray"
+            android:text="CAD"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_middle"
+        android:layout_marginRight="@dimen/spacing_middle"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/custom_pay_btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_middle"
+            android:layout_margin="@dimen/spacing_middle"
+            android:paddingLeft="@dimen/spacing_large"
+            android:paddingRight="@dimen/spacing_large"
+            android:background="@drawable/border_round_yellow"
+            android:textColor="@color/colorDGray"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xmiddle"
+            android:text="@string/btn_later"/>
+
+        <Button
+            android:id="@+id/custom_pay_btn_continue"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_middle"
+            android:layout_margin="@dimen/spacing_middle"
+            android:paddingLeft="@dimen/spacing_large"
+            android:paddingRight="@dimen/spacing_large"
+            android:background="@drawable/border_round_yellow"
+            android:textColor="@color/colorDGray"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xmiddle"
+            android:text="@string/btn_continue"/>
+    </LinearLayout>
+
+</LinearLayout>

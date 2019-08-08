@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="140dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/list_hosting_item_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/spacing_middle"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/list_hosting_item_iv_image"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/sample_party"
+                android:scaleType="centerCrop"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/list_hosting_item_tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/list_hosting_item_rl_button"
+                    android:fontFamily="@font/sourcesanspro_semibold"
+                    android:textSize="@dimen/txt_middle"
+                    android:textColor="@color/colorDGray"
+                    android:text="Lorem ipsum dolor sit amet consect etur adipising elit."/>
+
+                <RelativeLayout
+                    android:id="@+id/list_hosting_item_rl_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/list_hosting_item_tv_status"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/list_hosting_item_btn_edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_xxsmall"
+                        android:layout_margin="@dimen/spacing_middle"
+                        android:background="@drawable/border_round_yellow"
+                        android:textColor="@color/colorDGray"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:textAllCaps="false"
+                        android:text="@string/btn_edit"/>
+
+                    <Button
+                        android:id="@+id/list_hosting_item_btn_cancel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_xxsmall"
+                        android:layout_toRightOf="@+id/list_hosting_item_btn_edit"
+                        android:layout_margin="@dimen/spacing_middle"
+                        android:background="@drawable/border_round_yellow"
+                        android:textColor="@color/colorDGray"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:textAllCaps="false"
+                        android:text="@string/btn_cancel"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/list_hosting_item_tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/spacing_large"
+                    android:layout_marginRight="@dimen/spacing_large"
+                    android:gravity="center"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textSize="@dimen/txt_xsmall"
+                    android:textColor="@color/colorGreen"
+                    android:text="@string/btn_publish"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

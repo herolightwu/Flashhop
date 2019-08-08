@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorDGray"
+    tools:context="com.flashhop.app.start.ForgotActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_xmiddle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_xlarge"
+            android:text="@string/app_name"/>
+
+        <ImageView
+            android:id="@+id/forgot_iv_back"
+            android:layout_width="@dimen/height_xsmall"
+            android:layout_height="@dimen/height_xsmall"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/spacing_middle"
+            android:layout_marginRight="@dimen/spacing_middle"
+            app:srcCompat="@drawable/ic_back"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/spacing_large">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_middle">
+                <EditText
+                    android:id="@+id/forgot_et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorGray_A"
+                    android:gravity="center"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_middle"
+                    android:hint="@string/email_addr"
+                    android:backgroundTint="@color/colorWhite"/>
+                <ImageView
+                    android:id="@+id/forgot_iv_email_err"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_clear_w"
+                    android:tint="@color/colorYellow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large"/>
+
+            <Button
+                android:id="@+id/forgot_btn_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_middle"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:paddingLeft="@dimen/spacing_xxlarge"
+                android:paddingRight="@dimen/spacing_xxlarge"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border_round_yellow"
+                android:textColor="@color/colorDGray"
+                android:textAllCaps="false"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textSize="@dimen/txt_xmiddle"
+                android:text="@string/btn_reset_pass"/>
+
+            <TextView
+                android:id="@+id/forgot_tv_sent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:fontFamily="@font/sourcesanspro"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_middle"
+                android:text="@string/forgot_sent_text"/>
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/tips_item_civ_avatar"
+        android:layout_width="@dimen/height_xxsmall"
+        android:layout_height="@dimen/height_xxsmall"
+        android:layout_margin="@dimen/spacing_middle"
+        android:src="@drawable/sample_invite"
+        app:civ_border_color="@color/colorWhite"
+        app:civ_border_width="0dp"/>
+
+    <TextView
+        android:id="@+id/tips_item_tv_give"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:gravity="right"
+        android:fontFamily="@font/sourcesanspro"
+        android:textSize="@dimen/txt_xxsmall"
+        android:textColor="@color/colorDGray"
+        android:text="12/23/2020"/>
+
+    <TextView
+        android:id="@+id/tips_item_tv_receive"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tips_item_tv_give"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:fontFamily="@font/sourcesanspro"
+        android:textSize="@dimen/txt_xxsmall"
+        android:textColor="@color/colorGreen"
+        android:text="$12.90"/>
+
+    <TextView
+        android:id="@+id/tips_item_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/tips_item_tv_receive"
+        android:layout_toRightOf="@+id/tips_item_civ_avatar"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:textSize="@dimen/txt_xxsmall"
+        android:textColor="@color/colorDGray"
+        android:text="Oreo"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorGray_F"
+        android:layout_below="@+id/tips_item_civ_avatar"/>
+
+</RelativeLayout>

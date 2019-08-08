@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "945997803187",
+    "firebase_url": "https://flashhop-84c2b.firebaseio.com",
+    "project_id": "flashhop-84c2b",
+    "storage_bucket": "flashhop-84c2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945997803187:android:dc8977b5e4a8d848",
+        "android_client_info": {
+          "package_name": "com.flashhop.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945997803187-us62enki23bc5rp36fm8cbjli4a7tpnd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flashhop.app",
+            "certificate_hash": "2751a314d641140d21ca0dc004ebf2cf6c244e5f"
+          }
+        },
+        {
+          "client_id": "945997803187-ie4g89qgu5b1icir9nrpkrel2mgqmmfn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb5cteWC38zQfs3l05G2n5KcfMYq3k1oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945997803187-2jg1qtt99f9lrbdcfj0n4uala1k1sfmn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

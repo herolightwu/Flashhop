@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray_trans">
+
+    <RelativeLayout
+        android:id="@+id/allow_frag_rl_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/spacing_xxlarge"
+            android:orientation="vertical"
+            android:background="@drawable/border_round_white">
+
+            <TextView
+                android:id="@+id/allow_frag_tv_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_large"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_middle"
+                android:textColor="@color/colorDGray"
+                android:text="@string/welcome_allow_location"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:gravity="center_horizontal"
+                android:weightSum="3"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/allow_frag_btn_enable"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="@dimen/height_middle"
+                    android:layout_marginBottom="@dimen/spacing_middle"
+                    android:background="@drawable/border_round_yellow"
+                    android:textColor="@color/colorDGray"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/txt_xmiddle"
+                    android:text="@string/btn_enable"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/allow_frag_tv_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:textSize="@dimen/txt_middle"
+                android:textColor="@color/colorDGray"
+                android:text="@string/welcome_skip"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

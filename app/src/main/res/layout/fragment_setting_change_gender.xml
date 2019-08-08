@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_xmiddle"
+            android:layout_marginTop="@dimen/spacing_xlarge">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/colorDGray"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_xxmiddle"
+                android:text="@string/setting_change_gender"/>
+
+            <ImageView
+                android:id="@+id/setting_change_gender_iv_back"
+                android:layout_width="@dimen/height_xsmall"
+                android:layout_height="@dimen/height_xsmall"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:tint="@color/colorDGray"
+                app:srcCompat="@drawable/ic_back"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_huge"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xlarge"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/setting_change_gender_ll_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/spacing_large"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/setting_change_gender_iv_male"
+                            android:layout_width="@dimen/height_large"
+                            android:layout_height="@dimen/height_large"
+                            android:tint="@color/colorDGray"
+                            android:src="@drawable/male_w"/>
+
+                        <TextView
+                            android:id="@+id/setting_change_gender_tv_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:textColor="@color/colorDGray"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:fontFamily="@font/sourcesanspro_semibold"
+                            android:text="@string/gender_male"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/setting_change_gender_ll_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_margin="@dimen/spacing_large"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/setting_change_gender_iv_female"
+                            android:layout_width="@dimen/height_large"
+                            android:layout_height="@dimen/height_large"
+                            android:tint="@color/colorDGray"
+                            android:src="@drawable/female_y"/>
+
+                        <TextView
+                            android:id="@+id/setting_change_gender_tv_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:textColor="@color/colorDGray"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:fontFamily="@font/sourcesanspro_semibold"
+                            android:text="@string/gender_female"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/setting_change_gender_tv_limit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_huge"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:visibility="gone"
+                    android:gravity="center"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textSize="@dimen/txt_xsmall"
+                    android:textColor="@color/colorRed"
+                    android:text="@string/setting_date_limit"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_huge"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:gravity="center_horizontal"
+                    android:weightSum="3"
+                    android:orientation="horizontal">
+                    <Button
+                        android:id="@+id/setting_change_gender_btn_save"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="@dimen/height_middle"
+                        android:layout_marginBottom="@dimen/spacing_middle"
+                        android:background="@drawable/border_round_yellow"
+                        android:textColor="@color/colorDGray"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:textSize="@dimen/txt_xmiddle"
+                        android:text="@string/btn_save"/>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

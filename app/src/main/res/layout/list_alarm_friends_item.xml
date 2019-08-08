@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_middle"
+        android:orientation="horizontal">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/alarm_friends_item_civ_avatar"
+            android:layout_width="@dimen/height_xmiddle"
+            android:layout_height="@dimen/height_xmiddle"
+            android:src="@drawable/sample_invite"
+            app:civ_border_color="@color/colorWhite"
+            app:civ_border_width="0dp"/>
+
+        <TextView
+            android:id="@+id/alarm_friends_item_tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_middle"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/sourcesanspro"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/txt_xxsmall"
+            android:text="@string/alarm_sample"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:id="@+id/address_item_ll_back"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/address_item_tv_locality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_min"
+        android:maxLines="1"
+        android:fontFamily="@font/sourcesanspro_bold"
+        android:textSize="@dimen/txt_xxsmall"
+        android:textColor="@color/colorDGray"/>
+
+    <TextView
+        android:id="@+id/address_item_tv_full"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_min"
+        android:layout_marginBottom="@dimen/spacing_min"
+        android:maxLines="1"
+        android:fontFamily="@font/sourcesanspro"
+        android:textSize="@dimen/txt_xxsmall"
+        android:textColor="@color/colorGray"/>
+</LinearLayout>

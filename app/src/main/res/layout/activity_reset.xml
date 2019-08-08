@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorDGray"
+    tools:context="com.flashhop.app.start.ResetActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_xmiddle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_xlarge"
+            android:text="@string/reset_title"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/spacing_large">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_middle">
+                <EditText
+                    android:id="@+id/reset_et_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorGray_A"
+                    android:gravity="center"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_middle"
+                    android:inputType="textPassword"
+                    android:hint="@string/reset_verify_code"
+                    android:backgroundTint="@color/colorWhite"/>
+                <ImageView
+                    android:id="@+id/reset_iv_code_err"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_clear_w"
+                    android:tint="@color/colorYellow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_middle">
+                <EditText
+                    android:id="@+id/reset_et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorGray_A"
+                    android:gravity="center"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_middle"
+                    android:inputType="textPassword"
+                    android:hint="@string/new_password"
+                    android:backgroundTint="@color/colorWhite"/>
+                <ImageView
+                    android:id="@+id/reset_iv_pass_err"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_clear_w"
+                    android:tint="@color/colorYellow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_middle">
+                <EditText
+                    android:id="@+id/reset_et_retype"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorGray_A"
+                    android:gravity="center"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_middle"
+                    android:inputType="textPassword"
+                    android:hint="@string/retype_password"
+                    android:backgroundTint="@color/colorWhite"/>
+                <ImageView
+                    android:id="@+id/reset_iv_retype_err"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_clear_w"
+                    android:tint="@color/colorYellow"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large"/>
+
+            <Button
+                android:id="@+id/reset_btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_middle"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:paddingLeft="@dimen/spacing_xxlarge"
+                android:paddingRight="@dimen/spacing_xxlarge"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border_round_yellow"
+                android:textColor="@color/colorDGray"
+                android:textAllCaps="false"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textSize="@dimen/txt_xmiddle"
+                android:text="@string/btn_save"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

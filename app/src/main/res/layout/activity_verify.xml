@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorDGray"
+    tools:context="com.flashhop.app.start.VerifyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_xmiddle"
+        android:layout_marginTop="@dimen/spacing_xlarge">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"
+            android:textSize="@dimen/txt_xlarge"
+            android:text="@string/app_name"/>
+
+        <ImageView
+            android:id="@+id/verify_iv_back"
+            android:layout_width="@dimen/height_xsmall"
+            android:layout_height="@dimen/height_xsmall"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/spacing_middle"
+            android:layout_marginRight="@dimen/spacing_middle"
+            app:srcCompat="@drawable/ic_back"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/spacing_large">
+
+            <TextView
+                android:id="@+id/verify_tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:fontFamily="@font/sourcesanspro"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_middle"
+                android:text="@string/verify_desc"/>
+
+            <com.mukesh.OtpView
+                android:id="@+id/verify_otp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:layout_gravity="center_horizontal"
+                android:inputType="number"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:itemBackground="@color/colorPrimary"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/txt_xlarge"
+                android:textColorHint="@color/colorGray_A"
+                android:hint="000000"
+                app:itemCount="6"
+                app:lineColor="@color/colorWhite"
+                app:viewType="line"
+                />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_large"/>
+
+            <Button
+                android:id="@+id/verify_btn_ok"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_middle"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:paddingLeft="@dimen/spacing_xxlarge"
+                android:paddingRight="@dimen/spacing_xxlarge"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/border_round_yellow"
+                android:textColor="@color/colorDGray"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textSize="@dimen/txt_xmiddle"
+                android:text="@string/btn_verify"/>
+
+            <TextView
+                android:id="@+id/verify_tv_resend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/sourcesanspro"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_xxsmall"
+                android:text="@string/resend_code"/>
+
+            <TextView
+                android:id="@+id/verify_tv_facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/sourcesanspro"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/txt_xxsmall"
+                android:text="@string/verify_login_facebook"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
