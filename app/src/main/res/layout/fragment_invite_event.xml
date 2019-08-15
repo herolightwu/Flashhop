@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/invite_event_frag_rl_outside"
+    android:clickable="true"
+    android:background="@color/colorGray_trans">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_xlarge"
+        android:layout_centerVertical="true"
+        android:background="@drawable/border_round_white"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_mlarge">
+
+        <TextView
+            android:id="@+id/invite_event_frag_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xmiddle"
+            android:textColor="@color/colorDGray"
+            android:text="@string/invite_event_title"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/invite_event_frag_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xlarge"/>
+
+        <Button
+            android:id="@+id/invite_event_frag_btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_middle"
+            android:layout_marginTop="@dimen/spacing_xlarge"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/border_round_yellow"
+            android:paddingLeft="@dimen/spacing_large"
+            android:paddingRight="@dimen/spacing_large"
+            android:textColor="@color/colorDGray"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xxsmall"
+            android:text="@string/btn_send_invite"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.flashhop.app.fragments.AlarmFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/spacing_xxlarge"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xxmiddle"
+            android:textColor="@color/colorDGray"
+            android:text="@string/alarm_title"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_huge"
+            android:layout_marginRight="@dimen/spacing_huge"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_middle"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_xxsmall"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/alarm_frag_tv_friend"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:background="@drawable/border_rectangle_black"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/txt_xxsmall"
+                    android:text="@string/profile_friends"/>
+
+                <RelativeLayout
+                    android:id="@+id/alarm_frag_rl_me"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border_rectangle_white"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/alarm_frag_tv_me"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:text="@string/alarm_me"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/alarm_frag_civ_new"
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/alarm_frag_tv_me"
+                        android:layout_marginLeft="@dimen/spacing_middle"
+                        android:src="@color/colorRed"
+                        app:civ_border_width="0dp"
+                        app:civ_border_color="@color/colorWhite"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorBlack"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/alarm_frag_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large">
+            <LinearLayout
+                android:id="@+id/alarm_frag_ll_friends"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:orientation="vertical">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:scrollingCache="true">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/alarm_frag_friend_ll_today"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/spacing_middle"
+                                android:fontFamily="@font/sourcesanspro_bold"
+                                android:textColor="@color/colorDGray"
+                                android:textSize="@dimen/txt_xmiddle"
+                                android:text="Today"/>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/alarm_frag_recycler_friends_today"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/alarm_frag_friend_ll_yesterday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/spacing_middle"
+                                android:fontFamily="@font/sourcesanspro_bold"
+                                android:textColor="@color/colorDGray"
+                                android:textSize="@dimen/txt_xmiddle"
+                                android:text="Yesterday"/>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/alarm_frag_recycler_friends_yesterday"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/alarm_frag_friend_ll_last"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/spacing_middle"
+                                android:fontFamily="@font/sourcesanspro_bold"
+                                android:textColor="@color/colorDGray"
+                                android:textSize="@dimen/txt_xmiddle"
+                                android:text="Last 7 days"/>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/alarm_frag_recycler_friends_last"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/alarm_frag_ll_me"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <android.support.v4.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none"
+                    android:scrollingCache="true">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/alarm_frag_me_ll_new"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/spacing_middle"
+                                android:fontFamily="@font/sourcesanspro_bold"
+                                android:textSize="@dimen/txt_xmiddle"
+                                android:textColor="@color/colorDGray"
+                                android:text="New"/>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/alarm_frag_me_recycler_new"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/alarm_frag_me_ll_earlier"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_middle"
+                                android:layout_marginBottom="@dimen/spacing_middle"
+                                android:fontFamily="@font/sourcesanspro_bold"
+                                android:textSize="@dimen/txt_xmiddle"
+                                android:textColor="@color/colorDGray"
+                                android:text="Earlier"/>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/alarm_frag_me_recycler_earlier"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v4.widget.NestedScrollView>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

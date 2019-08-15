@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:id="@+id/group_chat_frag_outside"
+    android:clickable="true"
+    android:focusable="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.GroupChatFragment">
+
+    <LinearLayout
+        android:id="@+id/group_chat_frag_ll_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorYellow">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxlarge"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/group_chat_frag_iv_back"
+                android:layout_width="@dimen/height_xsmall"
+                android:layout_height="@dimen/height_xsmall"
+                android:layout_centerVertical="true"
+                app:srcCompat="@drawable/ic_back"
+                android:tint="@color/colorDGray"/>
+
+            <ImageView
+                android:id="@+id/group_chat_frag_iv_menu"
+                android:layout_width="@dimen/height_xsmall"
+                android:layout_height="@dimen/height_xsmall"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:tint="@color/colorGray"
+                app:srcCompat="@drawable/ic_sel_marker"/>
+
+            <LinearLayout
+                android:id="@+id/group_chat_frag_ll_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/group_chat_frag_iv_menu"
+                android:layout_toRightOf="@+id/group_chat_frag_iv_back"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:background="@drawable/border_round_white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/height_xsmall"
+                    android:layout_height="@dimen/height_xsmall"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/spacing_middle"
+                    android:layout_marginRight="@dimen/spacing_middle"
+                    app:srcCompat="@drawable/ic_search_w"
+                    android:tint="@color/colorGray"/>
+
+                <EditText
+                    android:id="@+id/group_chat_frag_et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_middle"
+                    android:layout_marginRight="@dimen/spacing_large"
+                    android:background="@color/colorWhite"
+                    android:textColor="@color/colorBlack"
+                    android:paddingLeft="@dimen/spacing_small"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/txt_xmiddle"
+                    android:hint="Search"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/group_chat_frag_btn_where"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_xxsmall"
+                android:layout_toLeftOf="@+id/group_chat_frag_iv_menu"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:background="@drawable/border_round_dark"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:textAllCaps="false"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textColor="@color/colorYellow"
+                android:textSize="@dimen/txt_xxsmall"
+                android:text="@string/btn_where_hoppers"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/group_chat_frag_nsv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/group_chat_frag_rl_send"
+        android:layout_below="@+id/group_chat_frag_ll_title"
+        android:scrollbars="none"
+        android:scrollingCache="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_middle">
+                <RelativeLayout
+                    android:id="@+id/group_chat_frag_rl_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_middle"
+                    android:layout_alignParentRight="true">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/spacing_min"
+                        android:background="@drawable/border_b_back_w"
+                        android:padding="@dimen/spacing_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/group_chat_frag_tv_date"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorBlack"
+                            android:text="Aug\n3"/>
+                        <View
+                            android:layout_width="30dp"
+                            android:layout_height="1dp"
+                            android:background="@color/colorBlack"/>
+                        <TextView
+                            android:id="@+id/group_chat_frag_tv_weekday"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorBlack"
+                            android:text="Sat"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/group_chat_frag_ll_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/group_chat_frag_rl_date"
+                    android:layout_margin="@dimen/spacing_middle"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/group_chat_frag_tv_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:text="Lorem ipsum dolor sit amet, consect etur adipiscing elit."/>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/group_chat_frag_rl_avatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/group_chat_frag_ll_info"
+                    android:layout_centerHorizontal="true">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_chat_frag_civ_avatar0"
+                        android:layout_width="@dimen/height_middle"
+                        android:layout_height="@dimen/height_middle"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_annotation"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_chat_frag_civ_avatar1"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:visibility="gone"
+                        android:src="@drawable/sample_avatar1"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_chat_frag_civ_avatar2"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="36dp"
+                        android:visibility="gone"
+                        android:src="@drawable/sample_avatar2"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_chat_frag_civ_avatar3"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="52dp"
+                        android:visibility="gone"
+                        android:src="@drawable/sample_avatar3"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_chat_frag_civ_avatar4"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="68dp"
+                        android:visibility="gone"
+                        android:src="@drawable/sample_avatar4"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_chat_frag_civ_avatar5"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="84dp"
+                        android:visibility="gone"
+                        android:src="@drawable/sample_avatar1"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_chat_frag_civ_avatar6"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="100dp"
+                        android:visibility="gone"
+                        android:src="@drawable/sample_avatar2"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_chat_frag_civ_avatar7"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="116dp"
+                        android:visibility="gone"
+                        android:src="@drawable/sample_avatar3"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_chat_frag_civ_avatar8"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="132dp"
+                        android:visibility="gone"
+                        android:src="@drawable/sample_avatar4"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"/>
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/group_chat_frag_civ_avatar9"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="148dp"
+                        android:visibility="gone"
+                        android:src="@drawable/sample_avatar1"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_middle"
+                    android:layout_below="@+id/group_chat_frag_rl_avatar">
+                    <TextView
+                        android:id="@+id/group_chat_frag_tv_remain"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_xsmall"
+                        android:textColor="@color/colorRed"
+                        android:text="@string/chat_group_remain"/>
+
+                    <Button
+                        android:id="@+id/group_chat_frag_btn_invite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_xxsmall"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/border_round_yellow"
+                        android:textColor="@color/colorDGray"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/sourcesanspro_bold"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:text="@string/btn_invite"/>
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/group_chat_frag_msg_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/group_chat_frag_rl_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/group_chat_frag_iv_attach"
+            android:layout_width="@dimen/height_xsmall"
+            android:layout_height="@dimen/height_xsmall"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/spacing_middle"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:tint="@color/colorGray"
+            android:src="@drawable/ic_image" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/spacing_middle"
+            android:layout_marginBottom="@dimen/spacing_middle"
+            android:background="@drawable/bg_chatedit">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/spacing_middle">
+                <EditText
+                    android:id="@+id/group_chat_frag_et_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_middle"
+                    android:layout_toLeftOf="@+id/group_chat_frag_btn_send"
+                    android:background="@drawable/border_edit_half_l"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_small"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textColor="@color/colorDGray"
+                    android:textSize="@dimen/txt_xxsmall"
+                    android:hint="Say something..."/>
+
+                <Button
+                    android:id="@+id/group_chat_frag_btn_send"
+                    android:layout_width="@dimen/height_xlarge"
+                    android:layout_height="@dimen/height_middle"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/border_round_right_half_yellow"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textColor="@color/colorDGray"
+                    android:textSize="@dimen/txt_xxsmall"
+                    android:text="@string/btn_send"/>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/group_chat_frag_iv_rec"
+            android:layout_width="@dimen/height_xsmall"
+            android:layout_height="@dimen/height_xsmall"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_middle"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:src="@drawable/ic_mic" />
+
+    </LinearLayout>
+
+</RelativeLayout>

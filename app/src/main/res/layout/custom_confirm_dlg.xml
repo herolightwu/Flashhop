@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_round_white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_xlarge"/>
+
+    <TextView
+        android:id="@+id/custom_confirm_tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_middle"
+        android:layout_marginLeft="@dimen/spacing_large"
+        android:layout_marginRight="@dimen/spacing_large"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:fontFamily="@font/sourcesanspro"
+        android:textSize="@dimen/txt_xxmiddle"
+        android:textColor="@color/colorDGray"
+        android:text="Sign out of my account"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_middle"
+        android:layout_marginRight="@dimen/spacing_middle"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/custom_confirm_btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_middle"
+            android:layout_margin="@dimen/spacing_middle"
+            android:paddingLeft="@dimen/spacing_large"
+            android:paddingRight="@dimen/spacing_large"
+            android:background="@drawable/border_round_yellow"
+            android:textColor="@color/colorDGray"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xmiddle"
+            android:text="@string/btn_cancel"/>
+
+        <Button
+            android:id="@+id/custom_confirm_btn_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_middle"
+            android:layout_margin="@dimen/spacing_middle"
+            android:paddingLeft="@dimen/spacing_large"
+            android:paddingRight="@dimen/spacing_large"
+            android:background="@drawable/border_round_yellow"
+            android:textColor="@color/colorDGray"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xmiddle"
+            android:text="@string/btn_sure"/>
+    </LinearLayout>
+
+</LinearLayout>

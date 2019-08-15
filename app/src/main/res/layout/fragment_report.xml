@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clickable="true"
+        android:focusable="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_xmiddle"
+            android:layout_marginTop="@dimen/spacing_xlarge">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/colorDGray"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_xxmiddle"
+                android:text="@string/report_title"/>
+
+            <ImageView
+                android:id="@+id/report_frag_iv_back"
+                android:layout_width="@dimen/height_xsmall"
+                android:layout_height="@dimen/height_xsmall"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:tint="@color/colorDGray"
+                app:srcCompat="@drawable/ic_back"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_large"
+                android:orientation="vertical">
+
+                <!--<EditText
+                    android:id="@+id/report_frag_et_subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_middle"
+                    android:background="@drawable/border_edit_small_round"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:paddingLeft="@dimen/spacing_large"
+                    android:paddingRight="@dimen/spacing_large"
+                    android:textColor="@color/colorDGray"
+                    android:gravity="center_vertical"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textSize="@dimen/txt_xxsmall"
+                    android:hint="Subject"/>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_middle">
+                    <android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/report_frag_sp_subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_large"
+                        android:paddingLeft="@dimen/spacing_large"
+                        android:paddingRight="@dimen/spacing_large"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/report_frag_et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/border_edit"
+                    android:padding="@dimen/spacing_large"
+                    android:textColor="@color/colorDGray"
+                    android:gravity="start"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textSize="@dimen/txt_xxsmall"
+                    android:hint="Report content"/>
+
+
+                <Button
+                    android:id="@+id/report_frag_btn_report"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height_middle"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:layout_marginBottom="@dimen/spacing_large"
+                    android:paddingLeft="@dimen/spacing_large"
+                    android:paddingRight="@dimen/spacing_large"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/border_round_yellow"
+                    android:textColor="@color/colorDGray"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textSize="@dimen/txt_xmiddle"
+                    android:text="@string/btn_report"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

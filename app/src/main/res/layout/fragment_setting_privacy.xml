@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SettingPrivacyFrag">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clickable="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_xmiddle"
+            android:layout_marginTop="@dimen/spacing_xlarge">
+
+            <TextView
+                android:id="@+id/setting_privacy_frag_tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@color/colorDGray"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textSize="@dimen/txt_xxmiddle"
+                android:text="@string/setting_privacy"/>
+
+            <ImageView
+                android:id="@+id/setting_privacy_frag_iv_back"
+                android:layout_width="@dimen/height_xsmall"
+                android:layout_height="@dimen/height_xsmall"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:tint="@color/colorBlack"
+                app:srcCompat="@drawable/ic_back"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_middle"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textColor="@color/colorDGray"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:text="@string/setting_hide_age"/>
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/setting_privacy_frag_sw_hide_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:checked="false"
+                        android:theme="@style/SCBSwitch"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGray_F"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/height_middle"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textColor="@color/colorDGray"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:text="@string/setting_hide_location"/>
+                    <android.support.v7.widget.SwitchCompat
+                        android:id="@+id/setting_privacy_frag_sw_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:checked="true"
+                        android:theme="@style/SCBSwitch"/>
+                </RelativeLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGray_F"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/setting_privacy_frag_btn_save"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_middle"
+                android:layout_marginTop="@dimen/spacing_xxlarge"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large"
+                android:background="@drawable/border_round_yellow"
+                android:textColor="@color/colorDGray"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                android:textSize="@dimen/txt_xxsmall"
+                android:text="@string/btn_save"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

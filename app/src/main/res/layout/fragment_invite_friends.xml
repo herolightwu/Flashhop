@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/invite_frag_rl_outside"
+    android:background="@color/colorGray_trans">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_xlarge"
+        android:layout_centerVertical="true"
+        android:background="@drawable/border_round_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing_large"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_middle"
+            android:textColor="@color/colorDGray"
+            android:text="@string/invite_your_friends"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_middle"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_middle"
+            android:background="@drawable/border_edit">
+
+            <ImageView
+                android:id="@+id/invite_frag_iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_search_w"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:tint="@color/colorGray"/>
+
+            <EditText
+                android:id="@+id/invite_frag_et_search"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_xxsmall"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_marginBottom="2dp"
+                android:paddingLeft="@dimen/spacing_middle"
+                android:paddingRight="@dimen/spacing_middle"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorDGray"
+                android:textSize="@dimen/txt_middle"
+                android:hint="Username"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/invite_frag_tv_names"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_middle"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_middle"
+            android:textSize="@dimen/txt_xsmall"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textColor="@color/colorDGray"
+            android:text="Bricen, Maynard, Sample1"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="440dp">
+
+            <TextView
+                android:id="@+id/invite_frag_tv_label"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/sourcesanspro"
+                android:textColor="@color/colorGray_D"
+                android:textSize="@dimen/txt_xsmall"
+                android:text="@string/invite_label"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorGray_D"
+                android:layout_toLeftOf="@+id/invite_frag_tv_label"
+                android:layout_marginRight="@dimen/spacing_small"/>
+
+            <GridView
+                android:id="@+id/invite_frag_grid_user"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@+id/invite_frag_tv_label"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_above="@+id/invite_frag_ll_button"
+                android:numColumns="3"/>
+
+            <LinearLayout
+                android:id="@+id/invite_frag_ll_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/invite_frag_btn_cancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height_middle"
+                    android:layout_margin="@dimen/spacing_middle"
+                    android:background="@drawable/border_round_yellow"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:textColor="@color/colorDGray"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textSize="@dimen/txt_middle"
+                    android:text="@string/btn_cancel"/>
+
+                <Button
+                    android:id="@+id/invite_frag_btn_send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/height_middle"
+                    android:layout_margin="@dimen/spacing_middle"
+                    android:background="@drawable/border_round_yellow"
+                    android:paddingLeft="@dimen/spacing_middle"
+                    android:paddingRight="@dimen/spacing_middle"
+                    android:textColor="@color/colorDGray"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textSize="@dimen/txt_middle"
+                    android:text="@string/btn_send_invite"/>
+            </LinearLayout>
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/group_chat_show_users_photos"
+        android:title="@string/chat_menu_show_users_photos" />
+
+    <item
+        android:id="@+id/group_chat_show_online"
+        android:title="@string/chat_menu_show_online" />
+
+    <item
+        android:id="@+id/group_chat_tracking_host"
+        android:title="@string/chat_menu_bill_tracking_by_host" />
+
+    <item
+        android:id="@+id/group_chat_search"
+        android:title="@string/chat_menu_search" />
+
+    <item
+        android:id="@+id/group_chat_mute_notification"
+        android:title="@string/chat_menu_mute_notification" />
+
+    <item
+        android:id="@+id/group_chat_exit"
+        android:title="@string/chat_menu_exit_group" />
+
+    <item
+        android:id="@+id/group_chat_report"
+        android:title="@string/chat_menu_report_group" />
+
+</menu>

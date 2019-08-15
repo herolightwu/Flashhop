@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_middle"
+        android:orientation="horizontal">
+        <android.support.v7.widget.CardView
+            android:id="@+id/alarm_event_item_card"
+            android:layout_width="@dimen/height_xmiddle"
+            android:layout_height="@dimen/height_xmiddle"
+            app:cardBackgroundColor="@color/colorWhite"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="1dp"
+            app:cardUseCompatPadding="true">
+
+            <ImageView
+                android:id="@+id/alarm_event_item_iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/sample_invite"
+                android:scaleType="centerCrop"/>
+
+        </android.support.v7.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_middle"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/alarm_event_item_tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/txt_xxsmall"
+                android:text="@string/alarm_sample_event"/>
+
+            <Button
+                android:id="@+id/alarm_msg_item_btn_action"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_middle"
+                android:layout_marginTop="@dimen/spacing_middle"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large"
+                android:background="@drawable/border_round_yellow"
+                android:textColor="@color/colorDGray"
+                android:textAllCaps="false"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textSize="@dimen/txt_xxsmall"
+                android:text="@string/btn_where_hoppers"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

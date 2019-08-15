@@ -1,0 +1,364 @@
+<resources>
+    <string name="app_name">Flashhop</string>
+
+    <string name="my_places_api_key">AIzaSyCMClbEtIOY8iGfi9CMO30jGiOG1wTVDt4</string>
+
+    <string name="Onesignal_App_ID">46b7d793-bd13-4788-83d1-362754041de2</string>
+
+    <string name="facebook_app_id">449127882346465</string>
+    <string name="fb_login_protocol_scheme">fb449127882346465</string>
+
+    <!--<string name="client_id">79ca453586324e2a90f2e29d1d3ea25f</string>-->
+    <string name="client_id">b7c5251d5d1e47c0a95260de5eece2c6</string>
+    <string name="callback_url">https://instagram.com/</string>
+    <string name="base_url">https://api.instagram.com/</string>
+    <!--<string name="redirect_url">https://www.instagram.com/</string>-->
+    <string name="redirect_url">http://localhost</string>
+    <string name="get_user_info_url">https://api.instagram.com/v1/users/self/?access_token=</string>
+
+    <string name="logo_desc">Don\'t Swipe. Just Pin.</string>
+    <string name="welcome_to">Welcome to Flashhop</string>
+    <string name="welcome_question">We have a few more questions so we can better help you.</string>
+    <string name="welcome_step">Step %d of 5</string>
+    <string name="welcome_pick">Select your languages\n(You may select more than one)</string>
+    <string name="welcome_gender">Select your gender</string>
+    <string name="welcome_gender_desc">You may change your gender after account setup, but is subject to review.</string>
+    <string name="gender_male">Male</string>
+    <string name="gender_female">Female</string>
+    <string name="welcome_birthday">When is your birthday?</string>
+    <string name="welcome_birth_desc">Confirming your age will help us find suitable events for you. You can choose to hide your age in the privacy options setting.</string>
+    <string name="welcome_inter_choose">Select your interests</string>
+    <string name="welcome_allow_location">Allow location in Flashhop to enable more functions.</string>
+    <string name="welcome_skip"><u>Skip</u></string>
+    <string name="welcome_allow_notification">Allow Flashhop to send you push notifications.</string>
+    <string name="welcome_lang_desc">You will see recommend events posted in all languages you speak.</string>
+    <string name="welcome_upload_photos">Upload a profile photo</string>
+    <string name="welcome_choose_photos">Choose Photos</string>
+    <string name="welcome_inter_err">Please at least select one</string>
+    <string name="welcome_preview">Preview</string>
+    <string name="welcome_edit"><u>Edit</u></string>
+
+    <string name="lang_en">English</string>
+    <string name="lang_fr">Français</string>
+    <string name="lang_cn">中文</string>
+    <string name="lang_es">Español</string>
+    <string name="lang_ja">日本語</string>
+    <string name="lang_ko">한국어</string>
+    <string name="lang_ar">اللغة العربية</string>
+    <string name="lang_ru">Русский язык</string>
+    <string name="lang_de">Deutsch</string>
+    <string name="lang_pt">Português</string>
+
+    <string name="interest_party">Party</string>
+    <string name="interest_eating">Eating</string>
+    <string name="interest_games">Games</string>
+    <string name="interest_sports">Sports</string>
+    <string name="interest_outdoors">Outdoors</string>
+    <string name="interest_spirits">Spiritual</string>
+    <string name="interest_dating">Dating</string>
+    <string name="interest_arts">Arts</string>
+    <string name="interest_culture">Study</string>
+
+    <!--Sign up Screen-->
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="email_addr">Email Address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="verification_desc">By clicking \"Send Verification Code\". you will receive a code by email. The code will expire in 30 mins.</string>
+    <string name="forgot_password"><u>Forgot Password?</u></string>
+    <string name="forgot_sent_text">A verification code has been sent to\n%s.\nPlease follow the instruction to reset password.</string>
+    <string name="reset_title">Password Reset</string>
+    <string name="new_password">New Password</string>
+    <string name="retype_password">Retype your password</string>
+    <string name="verify_desc">Please enter the 6 digit number that we sent to %s</string>
+    <string name="resend_code">Didn\'t receive?<u>Resend Code</u></string>
+    <string name="resent_verify_code_txt">A new code has sent to your email.\nStill didn\'t receive? Try to check your junk mail or</string>
+    <string name="verify_login_facebook"><u>login Facebook</u></string>
+    <string name="welcome_back">Welcome Back</string>
+    <string name="reset_verify_code">Verify Code</string>
+    <string name="verification_code">Verification Code</string>
+
+    <!--Error -->
+    <string name="err_email_invalid">Email is invalid</string>
+    <string name="err_first_empty">First name is empty</string>
+    <string name="err_last_empty">Last name is empty</string>
+    <string name="err_pass_length">Minimum 6 characters</string>
+    <string name="err_enter_fields">Please enter above fields correctly.</string>
+    <string name="err_pass_retype">Password is not matching</string>
+    <string name="err_facebook_cancel">Facebook Login cancel.</string>
+    <string name="err_facebook_exception">Facebook Login error.</string>
+    <string name="err_instagram_login">Instagram Login error.</string>
+    <string name="err_verify_enter">Please enter verification code correctly.</string>
+    <string name="err_network">Network Error!, Please try again.</string>
+    <string name="err_registration">Registration user failed!</string>
+    <string name="err_invalid_code">We could not verify your code.</string>
+    <string name="err_permission">You don\'t have enough permission.</string>
+    <string name="err_login_pass_failed">Wrong Password</string>
+    <string name="err_wrong_code">Wrong Code</string>
+    <string name="err_card_number">*Card Number</string>
+    <string name="err_expire">*Expiration</string>
+    <string name="err_cvv">*CVV</string>
+    <string name="err_pick_date">*Pick a date</string>
+    <string name="err_pick_time">*Pick a time</string>
+    <string name="err_title">*Title</string>
+    <string name="err_desc">*Type description</string>
+    <string name="err_invalid_address">*Invalid Address</string>
+
+    <!--Home section-->
+    <string name="nav_home">Home</string>
+    <string name="nav_mine">Calendar</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_alarm">What\'s up</string>
+    <string name="pin_my_loc">Pin my location</string>
+    <string name="guide_pin_skip"><u>Skip quick navigation</u></string>
+    <string name="guide_pin_location">Pin My Location</string>
+    <string name="guide_pin_desc">By clicking, you pin your location for 60 minutes.\nAll users can then invite you to nearby events.\nA pinned location is not your real-time location.</string>
+    <string name="guide_event_add">You can host a new event here.</string>
+    <string name="guide_filter">You can filter to see activities by events or by people.</string>
+    <string name="guide_profile">Update your profile pictures and personal information.</string>
+    <string name="guide_mark">Check out nearby events.</string>
+    <string name="guide_annotation">Check out nearby people.</string>
+    <string name="user_liked_you">%s super liked you</string>
+    <string name="user_dissed_you">%s super dissed you</string>
+    <string name="like_hell_no">Hell no</string>
+    <string name="like_not_yet">Not yet</string>
+    <string name="like_me_too">Me too</string>
+    <string name="diss_whatever">Whatever</string>
+    <string name="diss_throw_back">Throw back</string>
+    <string name="like_too_sweet">Sweet!\n%s super likes you too.</string>
+    <string name="drop_the_pin">Drop the pin</string>
+
+
+    <!--Filter-->
+    <string name="filter_title">Filter</string>
+    <string name="filter_view_all">View all</string>
+    <string name="filter_people_only">People only</string>
+    <string name="filter_events_only">Events only</string>
+    <string name="filter_date">Date</string>
+    <string name="filter_category">Category</string>
+    <string name="filter_age">Age</string>
+    <string name="filter_gender">Gender</string>
+
+    <!--Profile -->
+    <string name="profile_title">Profile</string>
+    <string name="profile_edit_title">Edit Profile</string>
+    <string name="personality_type">Personality Type</string>
+    <string name="what_is_this"><u>What\'s this?</u></string>
+    <string name="fun_facts">Fun Facts</string>
+    <string name="fun_facts_hint">Eg. The quick brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog.</string>
+    <string name="bag_description">Update your profile pictures and personal</string>
+    <string name="what_description"><u>We recommend you to take the\ntest before selecting.</u></string>
+    <string name="allow_access_gallery">Allow Flashhop to access your gallery to upload photos.</string>
+    <string name="profile_organized">Organized</string>
+    <string name="profile_tags">Tags</string>
+    <string name="profile_add_friend"><u>Add Friend</u></string>
+    <string name="profile_requesting_friend">Waiting for approval</string>
+    <string name="profile_friends">Friends</string>
+    <string name="profile_add_guide">Sorry, you need to hangout with %s first by joining the same event.</string>
+    <string name="profile_menu_unfriend">Unfriend</string>
+    <string name="profile_menu_report">Report</string>
+    <string name="profile_like_question"><u>What should I do if I like %s?</u></string>
+    <string name="profile_question_desc">If you change the status to super like or super diss, the icon will change from flash to heart or poop.</string>
+    <string name="profile_select_tag">Choose a tag</string>
+    <string name="report_title">Report</string>
+    <string name="give_a_tip">Give a Tip</string>
+    <string name="give_tip_desc">How much do you want to tip?</string>
+
+    <string name="gallery_title">Gallery</string>
+    <string name="choose_pictures">Choose 1~7 pictures</string>
+    <string name="selected_format">%d/%d selected</string>
+
+    <string name="invite_event_title">Invite %s to my events</string>
+
+    <!--Calendar section-->
+    <string name="event_upcoming_descritpion">No upcoming events.\nLet\'s meet some Hoppers!</string>
+    <string name="event_hosting">Hosting</string>
+    <string name="event_going">Going</string>
+    <string name="event_saved">Favorite</string>
+
+    <!--Chat section-->
+    <string name="chat_group_chats">Group Chats</string>
+    <string name="chat_hangouts">Hangouts</string>
+    <string name="chat_group_notice">Group Chats will disappear in 7 days after the event.</string>
+    <string name="chat_group_info">Group Info</string>
+    <string name="chat_group_remain">This group chat will disappear in %s.</string>
+    <string name="chat_group_info_remain">This group will dismiss in %s.</string>
+    <string name="chat_group_info_change_name">Change Group Name</string>
+    <string name="chat_group_info_mute">Mute Group Notification</string>
+    <string name="chat_group_info_leave">Leave The Group</string>
+    <string name="chat_group_info_report">Report</string>
+    <string name="chat_menu_show_users_photos">Show users profile photos</string>
+    <string name="chat_menu_show_online">Show who\'s online</string>
+    <string name="chat_menu_bill_tracking_by_host">Bill Tracking by host</string>
+    <string name="chat_menu_search">Chat Search</string>
+    <string name="chat_menu_mute_notification">Mute Notifications</string>
+    <string name="chat_menu_tracking_by_host_only">Bill Tracking by host only</string>
+    <string name="chat_menu_exit_group">Exit Group</string>
+    <string name="chat_menu_report_group">Report Group</string>
+    <string name="chat_send_current_location">Send your current location?</string>
+    <string name="chat_delete_confirm_desc">Delete the message?</string>
+
+    <!--What's up-->
+    <string name="alarm_title">What\'s Up</string>
+    <string name="alarm_me">Me</string>
+    <string name="alarm_sample"><b>Richard</b> is joining the event <b>Lorem ipsum dolor sit amet, consect etur adipiscing elit.</b></string>
+    <string name="alarm_sample_event">Your event <b>Lorem ipsum dolor sit amet, consect etur adipiscing elit</b> is going to start in 30 mins.</string>
+    <!--<string name="alarm_me_requested_friend"><b>%s</b> has sent you a friend request.</string>
+    <string name="alarm_me_liked"><b>%s</b> has sent you a Heart.</string>
+    <string name="alarm_me_disliked"><b>%s</b> has sent you a Poop.</string>
+    <string name="alarm_me_accept_friend_request"><b>%s</b> has become your friend.</string>
+    <string name="alarm_me_friend_invite"><b>%s</b> invites you to a nearby event <b>%s</b>.</string>
+    <string name="alarm_me_non_friend_invite"><b>%s</b> invites you to a nearby event <b>%s</b>.</string>
+    <string name="alarm_me_ping_2hours_event">Your event <b>%s</b> is going to start in 2 hours.</string>
+    <string name="alarm_me_ping_30mins_event">Your event <b>%s</b> is going to start in 30 mins.</string>
+    <string name="alarm_me_ping_less_member">Your event <b>%s</b> didn\'t reach minimum number of people and will be cancelled.</string>
+    <string name="alarm_me_tagged"><b>%s</b> tagged you %s.</string>
+    <string name="alarm_me_tipped"><b>%s</b> tipped you.</string>
+    <string name="alarm_friend_pinned"><b>%s</b> pinned %s at <b>%s</b>.</string>
+    <string name="alarm_friend_tagged"><b>%s</b> tagged <b>%s</b> %s.</string>
+    <string name="alarm_friend_join_event"><b>%s</b> is joining the event <b>%s</b>.</string>
+    <string name="alarm_friend_host_event"><b>%s</b> is hosting a new event <b>%s</b>.</string>
+    <string name="alarm_friend_friend_invite"><b>%s</b> invited %s to <b>%s</b>.</string>-->
+
+    <!--Event-->
+    <string name="event_title">Title</string>
+    <string name="event_date">Date</string>
+    <string name="event_time">Time</string>
+    <string name="event_address">Address</string>
+    <string name="event_of_people"># of People</string>
+    <string name="event_max_30">4 - 30</string>
+    <string name="event_category">Category</string>
+    <string name="event_description">Description</string>
+    <string name="event_price">Price ($)</string>
+    <string name="event_coed">Co-ed</string>
+    <string name="event_boys">Boys Only</string>
+    <string name="event_girls">Girls Only</string>
+    <string name="event_private">Private (only who followed each other will see)</string>
+    <string name="event_exception">Do not allow invitations (host exception)</string>
+    <string name="event_280_maximum">280 characters maximum</string>
+    <string name="event_edit">Edit Event</string>
+    <string name="event_guide_full">This event has reached maximum number of people</string>
+    <string name="event_gender_join">This event can be joined %s only</string>
+    <string name="event_guide_join">Oops, you are not within the age range to attend this event.</string>
+    <string name="event_guide_where">Location pins will unlock 30 minutes prior to the event</string>
+    <string name="event_without_save">You haven\'t saved this event yet, you will lose all the content created if you go back.</string>
+
+    <string name="invite_your_friends">Invite your friends</string>
+    <string name="invite_label">A\nB\nC\nD\nE\nF\nG\nH\nI\nJ\nK\nL\nM\nN\nO\nP\nQ\nR\nS\nT\nU\nV\nW\nX\nY\nZ</string>
+    <string name="event_cancel_not_desc">Your event is going to start within 30 minutes. You\'re not able to cancel at the moment.</string>
+    <string name="event_cancel_confirm_desc">Confirm to cancel the event you\'re hosting.</string>
+    <string name="event_debit_card_register">Please add a debit card to receive the payment</string>
+
+    <!--payment-->
+    <string name="payment_detail_title">Payment Detail</string>
+    <string name="payment_card_number">Card Number</string>
+    <string name="payment_cardholder">Cardholder Name</string>
+    <string name="payment_expiration">Expiration</string>
+    <string name="payment_cvv">CVV</string>
+    <string name="payment_save_card">Save card for the future</string>
+    <string name="payment_billing_address">Billing Address</string>
+    <string name="payment_street_no">Street No.</string>
+    <string name="payment_street_Name">Street Name</string>
+    <string name="payment_province">Province</string>
+    <string name="payment_post_code">Post Code</string>
+    <string name="payment_city">City</string>
+    <string name="payment_withdraw_desc">You have to save a debit card to withdraw the tips.</string>
+
+    <!--Settings-->
+    <string name="setting_title">Settings</string>
+    <string name="setting_account">Accounts</string>
+    <string name="setting_notifiacations">Notifications</string>
+    <string name="setting_payment_method">Payment Methods</string>
+    <string name="setting_privacy_terms">Privacy and Terms of Service</string>
+    <string name="setting_logout">Log out</string>
+    <string name="setting_inactivate">Inactivate my account</string>
+    <string name="setting_activate">Activate my account</string>
+    <string name="setting_change_email">Change Email Address</string>
+    <string name="setting_change_password">Change Password</string>
+    <string name="setting_change_languages">Change My Languages</string>
+    <string name="setting_change_interests">Change My Interests</string>
+    <string name="setting_change_dob">Change My Birthday</string>
+    <string name="setting_change_gender">Change My Gender</string>
+    <string name="setting_noti_pause_all">Pause All</string>
+    <string name="setting_noti_my_act">My Activities</string>
+    <string name="setting_noti_friends_act">Friends Activities</string>
+    <string name="setting_noti_chats">Chats</string>
+    <string name="setting_privacy">Privacy</string>
+    <string name="setting_hide_age">Hide my age</string>
+    <string name="setting_hide_location">Hide my location</string>
+    <string name="setting_payment_cards">Credit/Debit Cards</string>
+    <string name="setting_change_email_success">New Email address have been saved.</string>
+    <string name="setting_logout_desc">Sign out of my account</string>
+    <string name="setting_inactive_desc">Inactive my account for now</string>
+    <string name="setting_active_desc">Active my account for now</string>
+    <string name="setting_dob_desc">(Only allow 1 change within 6 months)</string>
+    <string name="setting_date_limit">You can make edits after </string>
+
+    <!-- button text-->
+    <string name="signup_email">Continue with Email</string>
+    <string name="signup_facebook">Continue with Facebook</string>
+    <string name="signup_google">Continue  with  Google</string>
+    <string name="signup_instagram">Sign Up with Instagram</string>
+    <string name="signup_have_account"><u>Already have an account?</u></string>
+    <string name="send_verify_code">Send Verification Code</string>
+    <string name="login_facebook">Login with Facebook</string>
+    <string name="login_google">Login  with  Google</string>
+    <string name="login_instagram">Login with Instagram</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_reset_pass">Reset Password</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_verify">Verify</string>
+    <string name="btn_done">Done</string>
+    <string name="btn_enable">Enable</string>
+    <string name="btn_allow">Allow</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="btn_select_all">Select All</string>
+    <string name="btn_preview">Preview</string>
+    <string name="btn_join_event">Join an event</string>
+    <string name="btn_host_event">Host an event</string>
+    <string name="btn_select">Select</string>
+    <string name="btn_reset">Reset</string>
+    <string name="btn_publish">Publish</string>
+    <string name="btn_invite">Invite</string>
+    <string name="btn_save_draft">Save as Draft</string>
+    <string name="btn_change_cover">Change Cover Photo</string>
+    <string name="btn_edit">Edit</string>
+    <string name="btn_group_chat">Group Chat</string>
+    <string name="btn_where_hoppers">Where are My Hoppers</string>
+    <string name="btn_reedit_event">Re-edit My Event</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_send_invite">Send Invitation</string>
+    <string name="btn_pay_join">Pay to Join</string>
+    <string name="btn_joining">Joining</string>
+    <string name="btn_super_like">Super Like</string>
+    <string name="btn_super_diss">Super Diss</string>
+    <string name="btn_cancel_u"><u>Cancel</u></string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_join">Join</string>
+    <string name="btn_not_joinng">Not Joining</string>
+    <string name="btn_full">Full</string>
+    <string name="btn_sure">Sure</string>
+    <string name="btn_give_up">Give Up</string>
+    <string name="btn_view_events_list">View Events List</string>
+    <string name="btn_tag_user">Tag </string>
+    <string name="btn_tip_user">Tip </string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_delete">Delete</string>
+    <string name="btn_report">Report</string>
+    <string name="btn_draft">Draft</string>
+    <string name="btn_no">No</string>
+    <string name="btn_yes">Yes</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_delte_u"><u>Delete</u></string>
+    <string name="btn_view_all"><u>View all</u></string>
+    <string name="btn_accept">Accept</string>
+    <string name="btn_decline">Decline</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_later">Later</string>
+    <string name="btn_not_now">Not Now</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+</resources>

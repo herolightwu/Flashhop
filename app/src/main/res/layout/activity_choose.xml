@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorDGray"
+    android:weightSum="2"
+    tools:context="com.flashhop.app.start.ChooseActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/choose_iv_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:id="@+id/choose_tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/choose_iv_logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/spacing_xlarge"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/sourcesanspro"
+            android:textSize="@dimen/txt_xxmiddle"
+            android:text="@string/logo_desc"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/spacing_middle">
+
+            <Button
+                android:id="@+id/choose_btn_email"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_middle"
+                android:layout_marginLeft="@dimen/spacing_xlarge"
+                android:layout_marginRight="@dimen/spacing_xlarge"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:background="@drawable/border_round_yellow"
+                android:textColor="@color/colorDGray"
+                android:textAllCaps="false"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textSize="@dimen/txt_xmiddle"
+                android:text="@string/signup_email"/>
+
+            <LinearLayout
+                android:id="@+id/choose_ll_facebook"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_middle"
+                android:layout_marginLeft="@dimen/spacing_xlarge"
+                android:layout_marginRight="@dimen/spacing_xlarge"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textSize="@dimen/txt_middle"
+                    android:text="@string/signup_facebook"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/spacing_middle"
+                    android:src="@drawable/ic_facebook"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/choose_ll_google"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_middle"
+                android:layout_marginLeft="@dimen/spacing_xlarge"
+                android:layout_marginRight="@dimen/spacing_xlarge"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_xlarge"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/colorWhite"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textSize="@dimen/txt_middle"
+                    android:text="@string/signup_google"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/spacing_large"
+                    android:src="@drawable/ic_google"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/choose_tv_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_xlarge"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorWhite"
+                android:fontFamily="@font/sourcesanspro"
+                android:textSize="@dimen/txt_xxsmall"
+                android:text="@string/signup_have_account"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

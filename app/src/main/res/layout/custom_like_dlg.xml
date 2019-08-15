@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/border_round_white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_xlarge"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/custom_like_iv_photo"
+        android:layout_width="@dimen/height_middle"
+        android:layout_height="@dimen/height_middle"
+        android:layout_marginTop="@dimen/spacing_middle"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/sample_avatar4"
+        android:tint="@color/colorBlack"
+        app:civ_border_color="@color/colorWhite"
+        app:civ_border_width="0dp"/>
+
+    <TextView
+        android:id="@+id/custom_like_tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_middle"
+        android:layout_marginBottom="@dimen/spacing_middle"
+        android:layout_marginLeft="@dimen/spacing_xlarge"
+        android:layout_marginRight="@dimen/spacing_xlarge"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:fontFamily="@font/sourcesanspro"
+        android:textSize="@dimen/txt_xxmiddle"
+        android:textColor="@color/colorDGray"
+        android:text="@string/user_liked_you"/>
+
+    <ImageView
+        android:id="@+id/custom_like_iv_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/ic_liked"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_xlarge"
+        android:layout_marginRight="@dimen/spacing_xlarge"
+        android:layout_marginBottom="@dimen/spacing_xlarge"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/custom_like_btn_hell"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_xxsmall"
+            android:layout_margin="@dimen/spacing_min"
+            android:minHeight="@dimen/height_xsmall"
+            android:minWidth="0dp"
+            android:paddingLeft="@dimen/spacing_middle"
+            android:paddingRight="@dimen/spacing_middle"
+            android:background="@drawable/border_g_back_t"
+            android:textColor="@color/colorDGray"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xxsmall"
+            android:text="@string/like_hell_no"/>
+
+        <Button
+            android:id="@+id/custom_like_btn_yet"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_xxsmall"
+            android:layout_margin="@dimen/spacing_min"
+            android:minHeight="@dimen/height_xsmall"
+            android:minWidth="0dp"
+            android:paddingLeft="@dimen/spacing_middle"
+            android:paddingRight="@dimen/spacing_middle"
+            android:background="@drawable/border_g_back_t"
+            android:textColor="@color/colorDGray"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xxsmall"
+            android:text="@string/like_not_yet"/>
+
+        <Button
+            android:id="@+id/custom_like_btn_too"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_xxsmall"
+            android:layout_margin="@dimen/spacing_min"
+            android:minHeight="@dimen/height_xsmall"
+            android:minWidth="0dp"
+            android:paddingLeft="@dimen/spacing_middle"
+            android:paddingRight="@dimen/spacing_middle"
+            android:background="@drawable/border_round_yellow"
+            android:textColor="@color/colorDGray"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xxsmall"
+            android:text="@string/like_me_too"/>
+    </LinearLayout>
+
+</LinearLayout>

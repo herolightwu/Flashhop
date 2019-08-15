@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/border_round_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large">
+            <TextView
+                android:id="@+id/payment_detail_tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textSize="@dimen/txt_xxsmall"
+                android:textColor="@color/colorDarkText"
+                android:text="@string/payment_detail_title"/>
+
+            <LinearLayout
+                android:id="@+id/payment_detail_ll_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/payment_detail_ll_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border_b_back_w"
+                        android:padding="@dimen/spacing_small"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/payment_detail_tv_month"
+                            android:layout_width="32dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/sourcesanspro"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:textColor="@color/colorDGray"
+                            android:text="Aug"/>
+
+                        <TextView
+                            android:id="@+id/payment_detail_tv_day"
+                            android:layout_width="32dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:fontFamily="@font/sourcesanspro_semibold"
+                            android:textSize="@dimen/txt_xlarge"
+                            android:textColor="@color/colorDGray"
+                            android:text="3"/>
+                        <View
+                            android:id="@+id/payment_detail_line"
+                            android:layout_width="32dp"
+                            android:layout_height="1dp"
+                            android:background="@color/colorDGray"/>
+                        <TextView
+                            android:id="@+id/payment_detail_tv_weekday"
+                            android:layout_width="32dp"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textSize="@dimen/txt_xxsmall"
+                            android:fontFamily="@font/sourcesanspro"
+                            android:textColor="@color/colorDGray"
+                            android:text="Fri"/>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/payment_detail_card"
+                            android:layout_width="@dimen/height_xmiddle"
+                            android:layout_height="@dimen/height_xmiddle"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            app:cardBackgroundColor="@color/colorWhite"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="1dp"
+                            app:cardUseCompatPadding="true">
+
+                            <ImageView
+                                android:id="@+id/payment_detail_iv_image"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/sample_invite"
+                                android:scaleType="centerCrop"/>
+
+                        </android.support.v7.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/spacing_large"
+                            android:layout_marginRight="@dimen/spacing_large"
+                            android:layout_toLeftOf="@+id/payment_detail_card"
+                            android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/payment_detail_tv_event_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/sourcesanspro_bold"
+                                android:textSize="@dimen/txt_middle"
+                                android:textColor="@color/colorDGray"
+                                android:text="Lorem ipsum dolor sit amet, consect etur adipiscing elit. "/>
+
+                            <TextView
+                                android:id="@+id/payment_detail_tv_time"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/spacing_middle"
+                                android:fontFamily="@font/sourcesanspro_bold"
+                                android:textSize="@dimen/txt_xxsmall"
+                                android:textColor="@color/colorRed"
+                                android:text="10:30 am - 12:00 pm"/>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/payment_detail_tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/spacing_large"
+                    android:fontFamily="@font/sourcesanspro_bold"
+                    android:textSize="@dimen/txt_xxmiddle"
+                    android:textColor="@color/colorDGray"
+                    android:text="$20.00 CAD"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/payment_detail_ll_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/payment_detail_tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textSize="@dimen/txt_xxsmall"
+                    android:textColor="@color/colorGray"
+                    android:text="@string/payment_card_number" />
+
+                <EditText
+                    android:id="@+id/payment_detail_et_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:maxLength="19"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textSize="@dimen/txt_middle"
+                    android:textColor="@color/colorDGray"
+                    android:hint="xxxx xxxx xxxx xxxx"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/payment_detail_tv_holder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:textColor="@color/colorGray"
+                        android:text="@string/payment_cardholder" />
+
+                    <EditText
+                        android:id="@+id/payment_detail_et_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_middle"
+                        android:maxLines="1"
+                        android:textColor="@color/colorDGray"
+                        android:hint="@string/payment_cardholder"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/payment_detail_tv_expire"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:textColor="@color/colorGray"
+                        android:text="@string/payment_expiration" />
+
+                    <EditText
+                        android:id="@+id/payment_detail_et_expire"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_middle"
+                        android:maxLines="1"
+                        android:maxLength="5"
+                        android:textColor="@color/colorDGray"
+                        android:hint="12/22"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/payment_detail_tv_cvv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:textColor="@color/colorGray"
+                        android:text="@string/payment_cvv" />
+
+                    <EditText
+                        android:id="@+id/payment_detail_et_cvv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_middle"
+                        android:maxLines="1"
+                        android:maxLength="3"
+                        android:textColor="@color/colorDGray"
+                        android:hint="123"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/payment_detail_ll_confirm_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorGray_F"
+            android:visibility="gone"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textSize="@dimen/txt_xxsmall"
+                    android:textColor="@color/colorGray"
+                    android:text="@string/payment_card_number" />
+
+                <TextView
+                    android:id="@+id/payment_detail_tv_number_def"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textSize="@dimen/txt_middle"
+                    android:textColor="@color/colorDGray"
+                    android:hint="xxxx xxxx xxxx xxxx"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/spacing_large"
+                android:layout_marginLeft="@dimen/spacing_large"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:textColor="@color/colorGray"
+                        android:text="@string/payment_cardholder" />
+
+                    <TextView
+                        android:id="@+id/payment_detail_tv_name_def"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_middle"
+                        android:textColor="@color/colorDGray"
+                        android:hint="@string/payment_cardholder"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:textColor="@color/colorGray"
+                        android:text="@string/payment_expiration" />
+
+                    <TextView
+                        android:id="@+id/payment_detail_tv_expire_def"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_middle"
+                        android:textColor="@color/colorDGray"
+                        android:hint="10/2021"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_xxsmall"
+                        android:textColor="@color/colorGray"
+                        android:text="@string/payment_cvv" />
+
+                    <TextView
+                        android:id="@+id/payment_detail_tv_cvv_def"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_middle"
+                        android:textColor="@color/colorDGray"
+                        android:hint="***"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/payment_detail_ll_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:orientation="vertical">
+            <CheckBox
+                android:id="@+id/payment_detail_cb_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sourcesanspro"
+                android:button="@drawable/custom_check_dark"
+                android:text="@string/payment_save_card"
+                android:textSize="@dimen/txt_xxsmall"
+                android:checked="true"
+                android:textColor="@color/colorDGray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_large"
+                android:visibility="gone"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textSize="@dimen/txt_xxsmall"
+                    android:textColor="@color/colorGray"
+                    android:text="@string/payment_billing_address" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:id="@+id/payment_detail_et_street_no"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_middle"
+                        android:maxLines="1"
+                        android:textColor="@color/colorDGray"
+                        android:textStyle="italic"
+                        android:hint="@string/payment_street_no"/>
+
+                    <EditText
+                        android:id="@+id/payment_detail_et_street_name"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_middle"
+                        android:maxLines="1"
+                        android:textColor="@color/colorDGray"
+                        android:textStyle="italic"
+                        android:hint="@string/payment_street_Name"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/payment_detail_et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/sourcesanspro"
+                    android:textSize="@dimen/txt_middle"
+                    android:maxLines="1"
+                    android:textColor="@color/colorDGray"
+                    android:textStyle="italic"
+                    android:hint="@string/payment_city"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <!--<android.support.v7.widget.AppCompatSpinner
+                        android:id="@+id/payment_detail_sp_province"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="bottom"
+                        style="@style/Base.Widget.AppCompat.Spinner.Underlined"/>-->
+                    <EditText
+                        android:id="@+id/payment_detail_et_province"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_middle"
+                        android:maxLines="1"
+                        android:textColor="@color/colorDGray"
+                        android:textStyle="italic"
+                        android:hint="Province"/>
+                    <EditText
+                        android:id="@+id/payment_detail_et_postcode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/sourcesanspro"
+                        android:textSize="@dimen/txt_middle"
+                        android:maxLines="1"
+                        android:textColor="@color/colorDGray"
+                        android:textStyle="italic"
+                        android:hint="@string/payment_post_code"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_xlarge"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:layout_gravity="right">
+
+            <Button
+                android:id="@+id/payment_detail_btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_middle"
+                android:layout_marginRight="@dimen/spacing_large"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:visibility="gone"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large"
+                android:background="@drawable/border_y_back_w"
+                android:textColor="@color/colorDGray"
+                android:textAllCaps="false"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textSize="@dimen/txt_xxsmall"
+                android:text="@string/btn_cancel"/>
+
+            <Button
+                android:id="@+id/payment_detail_btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_middle"
+                android:layout_marginBottom="@dimen/spacing_middle"
+                android:paddingLeft="@dimen/spacing_large"
+                android:paddingRight="@dimen/spacing_large"
+                android:background="@drawable/border_round_yellow"
+                android:textColor="@color/colorDGray"
+                android:textAllCaps="false"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textSize="@dimen/txt_xxsmall"
+                android:text="@string/btn_next"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

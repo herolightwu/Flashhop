@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/border_round_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/custom_question_tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_xlarge"
+        android:gravity="center"
+        android:fontFamily="@font/sourcesanspro"
+        android:textSize="@dimen/txt_xmiddle"
+        android:textColor="@color/colorDGray"
+        android:text="@string/profile_question_desc"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_middle"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/custom_question_iv_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_liked"/>
+
+        <Button
+            android:id="@+id/custom_question_btn_like"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_xxsmall"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/spacing_xlarge"
+            android:paddingRight="@dimen/spacing_xlarge"
+            android:background="@drawable/border_round_yellow"
+            android:textColor="@color/colorDGray"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xxsmall"
+            android:text="@string/btn_super_like"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_middle"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/custom_question_iv_diss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_dissed"/>
+
+        <Button
+            android:id="@+id/custom_question_btn_diss"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_xxsmall"
+            android:layout_marginLeft="@dimen/spacing_large"
+            android:layout_marginRight="@dimen/spacing_large"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/spacing_xlarge"
+            android:paddingRight="@dimen/spacing_xlarge"
+            android:background="@drawable/border_round_yellow"
+            android:textColor="@color/colorDGray"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xxsmall"
+            android:text="@string/btn_super_diss"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/custom_question_tv_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/spacing_large"
+        android:layout_marginBottom="@dimen/spacing_xxlarge"
+        android:fontFamily="@font/sourcesanspro"
+        android:textSize="@dimen/txt_xxsmall"
+        android:textColor="@color/colorGray"
+        android:text="@string/btn_cancel_u"/>
+
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/give_tip_frag_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_xmiddle"
+        android:layout_marginTop="@dimen/spacing_xlarge">
+
+        <TextView
+            android:id="@+id/give_tip_frag_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:textColor="@color/colorDGray"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textSize="@dimen/txt_xxmiddle"
+            android:text="@string/give_a_tip"/>
+
+        <ImageView
+            android:id="@+id/give_tip_frag_iv_back"
+            android:layout_width="@dimen/height_xsmall"
+            android:layout_height="@dimen/height_xsmall"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/spacing_middle"
+            android:layout_marginRight="@dimen/spacing_middle"
+            android:tint="@color/colorBlack"
+            app:srcCompat="@drawable/ic_back"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/spacing_xlarge">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/give_tip_frag_civ_avatar"
+                android:layout_width="@dimen/height_middle"
+                android:layout_height="@dimen/height_middle"
+                android:src="@drawable/sample_party"
+                app:civ_border_color="@color/colorGreen"
+                app:civ_border_width="0dp"/>
+
+            <TextView
+                android:id="@+id/give_tip_frag_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/spacing_middle"
+                android:layout_marginRight="@dimen/spacing_middle"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textSize="@dimen/txt_middle"
+                android:textColor="@color/colorDGray"
+                android:text="Oreo"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textColor="@color/colorDGray"
+            android:textSize="@dimen/txt_middle"
+            android:text="@string/give_tip_desc"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/give_tip_frag_tv_1"
+                android:layout_width="@dimen/height_large"
+                android:layout_height="@dimen/height_large"
+                android:layout_margin="@dimen/spacing_middle"
+                android:background="@drawable/border_circle_g_w"
+                android:gravity="center"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/txt_middle"
+                android:text="$1" />
+
+            <TextView
+                android:id="@+id/give_tip_frag_tv_2"
+                android:layout_width="@dimen/height_large"
+                android:layout_height="@dimen/height_large"
+                android:layout_margin="@dimen/spacing_middle"
+                android:background="@drawable/border_circle_g_w"
+                android:gravity="center"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/txt_middle"
+                android:text="$2" />
+
+            <TextView
+                android:id="@+id/give_tip_frag_tv_5"
+                android:layout_width="@dimen/height_large"
+                android:layout_height="@dimen/height_large"
+                android:layout_margin="@dimen/spacing_middle"
+                android:background="@drawable/border_circle_g_w"
+                android:gravity="center"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/txt_middle"
+                android:text="$5" />
+
+            <TextView
+                android:id="@+id/give_tip_frag_tv_10"
+                android:layout_width="@dimen/height_large"
+                android:layout_height="@dimen/height_large"
+                android:layout_margin="@dimen/spacing_middle"
+                android:background="@drawable/border_circle_g_w"
+                android:gravity="center"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:textColor="@color/colorGreen"
+                android:textSize="@dimen/txt_middle"
+                android:text="$10" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/give_tip_frag_et_amount"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/spacing_xlarge"
+            android:textAlignment="center"
+            android:inputType="numberDecimal"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textColor="@color/colorGreen"
+            android:textSize="@dimen/txt_large"
+            android:hint="Custom amount"/>
+
+        <Button
+            android:id="@+id/give_tip_frag_btn_Done"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_middle"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/spacing_xlarge"
+            android:background="@drawable/border_round_green"
+            android:textColor="@color/colorWhite"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:textAllCaps="false"
+            android:textSize="@dimen/txt_xxsmall"
+            android:text="@string/btn_done"/>
+    </LinearLayout>
+</LinearLayout>
